@@ -1,3 +1,5 @@
+<!---Note: Although this is a markdown file, this specific README.md file is written for the GitHub markdown interpreter, not the Obsidian Md interpreter. As a result, this page will not be displayed correctly in Obsidian Md. Don't worry, this is fine, as this page is not part of the companion.    ----> 
+
 # AE4874-Companion
 An Obsidian Md vault containing a study companion / summary for the AE4874 Astrodynamics course.
 
@@ -23,7 +25,7 @@ gh repo clone Hans-Bananendans/Astrodynamics-Companion
     **This plugin is optional, but highly recommended, as this companion uses the Admonition boxes a lot to add emphasis and hide large mathematical derivations.**
 7. (OPTIONAL) Also install the [Editor Syntax Highlight](https://github.com/deathau/cm-editor-syntax-highlight-obsidian) plugin. This will make it easier to read the code snippets contained in the companion.
 If you went through the optional steps, the Community Plugin tab in the Option panel should look like this:
-![[installation1.png]]
+![installation1.png](./media/installation1.png)
 And that's it, you should now be good to go
 
 ___
