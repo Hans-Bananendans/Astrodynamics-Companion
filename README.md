@@ -1,4 +1,4 @@
-<!---Note: Although this is a markdown file, this specific README.md file is written for the GitHub markdown interpreter, not the Obsidian Md interpreter. As a result, this page will not be displayed correctly in Obsidian Md. Don't worry, this is fine, as this page is not part of the companion.    ----> 
+<!---Note: Although this is a markdown file, this specific README.md file is written for the GitHub markdown interpreter, not the Obsidian Md interpreter. As a result, this page may not be displayed correctly in Obsidian Md. Don't worry, this is fine, as this page is not part of the companion.    ---> 
 
 # AE4874-Companion
 An Obsidian Md vault containing a study companion / summary for the AE4874 Astrodynamics course.
@@ -20,10 +20,12 @@ gh repo clone Hans-Bananendans/Astrodynamics-Companion
 (this command requires the [GitHub CLI](https://cli.github.com/) to be installed)
 
 3. Open Obsidian Md, open a vault and select the option *Open folder as vault*. Select the folder in which you cloned this repository as the vault location. If successful, you will see a list of the files in this repository appear in a column on the left-hand side.
+![installation2.png](./media/installation2.png)
+
 4. (OPTIONAL) In Obsidian Md, go to **Options** -> **Community plugins** and turn Safe mode OFF. Obsidian Md can be expanded using an increasingly large pool of community-made plugins. These plugins cannot be validated by the Obsidian Md developers, and so they disable the use of these plugins by default. Don't worry, this repository only uses two plugins, both of which are open-source and safe for use.
 5. (OPTIONAL) Install the [Admonition](https://github.com/valentine195/obsidian-admonition) plugin. Click **Options** -> **Community plugins** -> **Browse community plugins** and search for "Admonition". After it has installed the plugin, enable it by ticking the box.
     **This plugin is optional, but highly recommended, as this companion uses the Admonition boxes a lot to add emphasis and hide large mathematical derivations.**
-7. (OPTIONAL) Also install the [Editor Syntax Highlight](https://github.com/deathau/cm-editor-syntax-highlight-obsidian) plugin. This will make it easier to read the code snippets contained in the companion.
+6. (OPTIONAL) Also install the [Editor Syntax Highlight](https://github.com/deathau/cm-editor-syntax-highlight-obsidian) plugin. This will make it easier to read the code snippets contained in the companion.
 If you went through the optional steps, the Community Plugin tab in the Option panel should look like this:
 ![installation1.png](./media/installation1.png)
 And that's it, you should now be good to go
@@ -31,7 +33,6 @@ And that's it, you should now be good to go
 ___
 ## Using this companion
 \< add description \>
-![[installation2.png]]
 
 ___
 ## Dependencies
