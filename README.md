@@ -34,6 +34,8 @@ ___
 ## Dark mode
 This companion is set up in such a way that **it does not matter whether you use light or dark mode**. All the figures use colours and shades that have enough contrast to see on light or dark backgrounds. My preference is to use dark mode, as it is easier on the eyes at night, but feel free to take your pick.
 
+![installation3.png](./media/installation3.png)
+
 ___
 ## Using this companion
 \< add description \>
