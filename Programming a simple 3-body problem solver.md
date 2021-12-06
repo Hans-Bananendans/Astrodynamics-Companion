@@ -125,7 +125,7 @@ If we look at the top six entries of the derivative of the state vector $d\bar{Y
 
 $$\dfrac{d\bar{Y}}{dt}[1:6] = \bar{Y}[7:12]$$
 
-Any mathematicians laying their eyes on this cursed formulation will probably cringe in abject horror, but I think it is clear what I mean: We can literally map the second half of the state vector onto the first half of the derivative of the state vector.
+Any mathematicians laying their eyes on this cursed formulation will probably cringe in abject horror, but I think it is clear what I mean: We can literally map the second half of the state vector onto the first half of the derivative of the state vector, because they are the same.
 
 As for the accelerations, this is where we use equation $\text{w2.3}$ from above. We first rewrite it so that it only solves for the acceleration, by dividing both sides by the particle's mass:
 
@@ -202,7 +202,7 @@ ___
 ### Step 2: Specifying initial conditions
 There are a number of constants and initial conditions that we will want to define.
 
-For our universal gravitational constant $G$, we can actually choose anything we like. We can use the value that you would use for calculations in our universe, but remember that in this case, it is just a scaling factor the forces. Since we can choose anything we like here, we will just set it to $1$. For the other quantities like mass, position, and velocity, we choose non-dimensional parameters. 
+For our universal gravitational constant $G$, we can actually choose anything we like. We can use the value that you would use for calculations in our universe, but remember that in this case, it is just a scaling factor for the forces. Since we can choose anything we like here, we will just set it to $1$. For the other quantities like mass, position, and velocity, we choose non-dimensional parameters. 
 
 If this seems a little bit strange to you, feel free to use real units, like meters and kilograms. It does not really matter for the mathematics, although it may make the motion a little slow. Just make sure that you use your units consistently if you're going to do so.
 
@@ -558,14 +558,14 @@ collapse: open
 color: 45,215,60
 
 ```py
-Figure 8: x_init       y_init       vx_init       vy_init
+# Figure 8: x_init       y_init       vx_init       vy_init
 Yi1 = [-0.97000436,  0.24308753, 0.4662036850, 0.4323657300]
 Yi2 = [        0.0,         0.0,  -0.93240737,  -0.86473146]
 Yi3 = [ 0.97000436, -0.24308753, 0.4662036850, 0.4323657300]
 ```
 ````
 
-This gives you the "Figure 8" configuration, which theoretically is slightly stable:
+This gives you the "Figure 8" configuration, which in theory is slightly stable:
 ![[f8_DOP853.png]]
 If you propagate it for a long time though, you'll see that it starts to deviate. This is most likely due to propagation errors that the integrator causes. You can switch to different integrators and compare the results. In the collapsed note below, you can see what happens. For this particular case, the `Radau` and `DOP853` integrators gave me the best results:
 ```ad-note

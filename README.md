@@ -29,6 +29,10 @@ gh repo clone Hans-Bananendans/Astrodynamics-Companion
 If you went through the optional steps, the Community Plugin tab in the Option panel should look like this:
 ![installation1.png](./media/installation1.png)
 And that's it, you should now be good to go
+___
+
+## Dark mode
+This companion is set up in such a way that **it does not matter whether you use light or dark mode**. All the figures use colours and shades that have enough contrast to see on light or dark backgrounds. My preference is to use dark mode, as it is easier on the eyes at night, but feel free to take your pick.
 
 ___
 ## Using this companion

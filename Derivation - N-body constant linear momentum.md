@@ -148,7 +148,7 @@ $$\bar{r}_{cm} = \bar{a}t+\bar{b}\tag{r7}$$
 
 Where $\bar{a}$ and $\bar{b}$ are simple vectorial constants.
 ```
-In other words, the barycentre of any moves in a straight line. Splitting this up into three Cartesian components gives us the next three integrals of motion:
+In other words, the barycentre of any n-body system moves in a straight line. Splitting this up into three Cartesian components gives us the next three integrals of motion:
 
 $$
 x_{cm} = a_1 t + b_1 \hspace{3em}
@@ -156,5 +156,5 @@ y_{cm} = a_2 t + b_2 \hspace{3em}
 z_{cm} = a_3 t + b_3 \tag{w2.8}
 $$
 
-So the conclusion here is that any N-body system has a constant amount of linear momentum. This means that since the total mass does not change, the velocity with which the whole system travels is constant. So if you were an outsider looking at such a system, you could consider the barycentre of the system and find it travelling along at some constant velocity. 
+So the conclusion here is that any N-body system has a **constant** amount of linear momentum. This means that since the total mass does not change, the velocity with which the whole system travels is constant. So if you were an outsider looking at such a system, you could consider the barycentre of the system and find it travelling along a straight line at some constant velocity. 
 ___
