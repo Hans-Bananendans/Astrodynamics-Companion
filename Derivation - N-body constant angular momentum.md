@@ -38,7 +38,7 @@ $$= G \dfrac{m_1 m_2}{r^3_{12}} \bar{r}_1 \times \bar{r}_{2} + G \dfrac{m_1 m_3}
 $$ + G \dfrac{m_2 m_3}{r^3_{23}} \bar{r}_2 \times \bar{r}_{3} + G \dfrac{m_3 m_1}{r^3_{31}} \bar{r}_3 \times \bar{r}_{1} + G \dfrac{m_3 m_2}{r^3_{32}} \bar{r}_3 \times \bar{r}_{2} \tag{r3}$$
 
 Now remember that the cross product of two vectors is [anticommutative](https://en.wikipedia.org/wiki/Anticommutative_property), meaning that:
-$$\bar{r}_i \times \bar{r}_{j} = -\bar{r}_j \times \bar{r}_{i} \tag{r4}$$
+$$\bar{r}_i \times \bar{r}_{j} = -(\bar{r}_j \times \bar{r}_{i}) \tag{r4}$$
 
 In addition, remember that the length of two identical but opposing vectors is the same:
 $$|\bar{r}_{ij}| = |\bar{r}_{ji}| \tag{r5}$$
