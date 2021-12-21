@@ -1,4 +1,13 @@
 # N-body relative motion
+
+```ad-note
+title: ## ** !!! This section is still under construction !!! **
+icon: hammer
+color: 240,200,25
+To do:
+ - [ ] Add derivation of Sphere of Influence 
+```
+
 <!-- This covers sections 4.1-4.3 from [Wakker] -->
 In chapter 2 of the [[Wakker|Wakker book]], we dealt with the N-body problem and set up the equations of motions. However, those equations of motion were usually defined in terms of some arbitrary [[Newtonian Mechanics#Inertial reference frames|inertial reference frame]] or the inertial reference frame at the barycentre of the system.
 
@@ -95,7 +104,7 @@ ___
 <!-- [Wakker] section 4.2-->
 
 ```ad-note
-title: Note: In this section, where [[Wakker]] uses $a_m$ I instead use $a_k$ for internal consistency.
+title: Note: In this section, [[Wakker]] sometimes uses $a_m$ for the mass of the primary body. I instead use $a_k$ for internal consistency.
 ```
 
 In this section, we dive deeper into perturbed motion. As a model, we will consider a satellite labelled $i$ in an orbit around the Earth (labelled $k$). We center our reference frame at the center of the Earth. Imagine that we also consider the Sun, which will be the perturbing body $d$. Let's see what kinds of accelerations this satellite experiences as a result of this situation.
@@ -291,7 +300,7 @@ fig.colorbar(plot1)
 
 ````
 
-We can see from this plot that most of the interesting stuff, namely the highest perturbing accelerations, happen where $\alpha$ is close to $0^\circ$, and $\gamma$ is of order of magnitude of $10^0$. The [[Wakker|book]] takes a more analytical approach, and mentions the following points:
+The plot suggests that most of the interesting stuff, namely the highest perturbing accelerations, happen where $\alpha$ is close to $0^\circ$, and $\gamma$ is of order of magnitude of $10^0$. The [[Wakker|book]] takes a more analytical approach, and mentions the following points:
 
 1. The acceleration $a_d$ is always positive, regardless of $\alpha$, so long as $\gamma>0$.
 2. The maximum $a_d$ happens when $\alpha = 0^\circ$. This is true regardless of the value of $\gamma$.
@@ -303,7 +312,7 @@ We can see from this plot that most of the interesting stuff, namely the highest
 ![[perturbation5a.png]]
 	- When $\gamma$ is then increased above 0.5, the locations of the minima start moving back further towards $\alpha = 180^\circ$.
 ![[perturbation5b.png]]
-	- Finally, when $\gamma$ is increased beyond $1.74$, the point at $\alpha=180^\circ$ becomes the minimum	
+	- Finally, when $\gamma$ is increased beyond $1.74$, the point at $\alpha=180^\circ$ becomes the minimum.
 ![[perturbation5c.png]]
 5. The [[Wakker|book]] also mentions that for very small values of $\gamma$ ($< 0.1$) the whole square root term from $\text{w4.11}$ is approximately equal to $\gamma$, and the maximum value is about equal to $2 \gamma$.
 
@@ -386,8 +395,59 @@ $$ (a_d)_{max} = G \dfrac{m_d}{r_d^2}
 
 ```
 
+Finally, we can compare the perturbing accelerations of a primary body $k$ and a perturbing body $d$ by calculating the **maximum relative perturbing acceleration**:
+
+$$ \left(\dfrac{a_d}{a_k}\right)_{max} = \dfrac{m_d}{m_k} \left(\dfrac{r_k}{r_d}\right)^2 
+\left| \dfrac{1}{(1-r_k/r_d)^2} -1 \right| 
+\tag{w4.14}$$
+
+On page 109 of the [[Wakker]] book you can find a table with the values of the maximum relative perturbing acceleration of various celestial bodies on the orbit of Earth around the sun. It is interesting to note that the values are heavily influenced by both the $m_d/m_k$ term as well as the $r_k/r_d$ term. The strongest influence on Earth's orbit is the moon, where $\left(\dfrac{a_d}{a_k}\right)_{max}$ is of $\mathcal{O}(-3)$, followed by Venus and Jupiter, whose influence is of $\mathcal{O}(-5)$.
 ___
 ## Sphere of influence
 <!-- [Wakker] section 4.3 -->
+
+```ad-note
+title: ## To do: Add derivation of the Sphere of Influence radius
+icon: hammer
+color: 240,200,25
+It may be possible to combine the overly convoluted derivation in [[Wakker]] and the [simpler derivation on Wikipedia](https://en.wikipedia.org/wiki/Sphere_of_influence_(astrodynamics)#Derivation) together to create a derivation that is comprehensive but comprehensible.
+```
+
+What we have seen in the previous section is that if you have a spacecraft that is located somewhere in relation to two bodies, it will experience a gravitational acceleration from either body. The magnitude of this acceleration depends on where exactly the spacecraft is located with respect to the two bodies. The question is now: when is it appropriate to describe the spacecraft's position in terms of the first body, and when in terms of the second body? When do the graviational effects of the one body take precedent over the other?
+
+This is a question that none other than Laplace himself considered, and he developed a concept called the **sphere of influence** (or SOI) as part of his answer. In essence, this is a circle (or a sphere in 3D space) around a body with mass. Inside the circle, the body's gravitational effects dominate, whilst outside the circle, those of the other body dominate. For the Earth and the sun, this looks something like this:
+![[SOI.png]]
+
+In reality, there will be more bodies which will distort the shape of the "sphere" of influence. Note for example that in the above image, we've conveniently left out the moon, Venus, or Jupiter. However, for most situations in the solar system, you can approximate things pretty well with a two-body model (except for example near the [Pluto-Charon system](https://en.wikipedia.org/wiki/Pluto#Satellites)). 
+
+But even for a two-body case such as we consider here, the sphere of influence is not truly a sphere, but almost a sphere. This can be thought of as something I like to refer to as the "egg of influence", depicted below:
+
+![[SOI_egg.png]]
+
+The reason for this is that if you're between Earth and the sun, and you're moving toward the sun, the gravitational effects of the Sun will become dominant more quickly than if you were to move perpendicularly to the sun. It can be shown that the ratio between the two radii is:
+$$\dfrac{(r_{SOI})_{min}}{(r_{SOI})_{max}} \approx \left(\dfrac{1+3 \cos^2 (0^\circ)}{1+3 \cos^2 (90^\circ)} \right)^{-1/10} \approx 0.87$$
+
+However, it turns out that we commonly neglect this oblateness and just assume that the SOI is a perfect sphere. So we will do the same for now.
+```ad-warning
+title: Assumption: The Sphere of Influence is a sphere!
+color: 200,80,225
+When discussing the Sphere of Influence (SOI), we assume that the SOI is a perfect sphere. As such, we ignore:
+ - The effect of third bodies on the shape of the SOI.
+ - The oblation of the SOI in the two-body case (no "egg of influence").
+```
+In that case, we can calculate the radius of the SOI as follows:
+
+$$R_{SOI} = r_{13} \left( \dfrac{m_1}{m_3}\right)^{2/5}$$
+
+Where $r_{13}$ is the distance between body $1$ and $3$. From this we can draw a few important conclusions:
+ - The size of the SOI of some primary body (e.g. the Earth) is **not** fixed, but also depends on the perturbing body that is being considered (e.g. the sun).
+ - The heavier the primary body is with respect to the perturbing body, the larger the SOI of the primary body.
+ - The radius of the SOI increases proportionally to the distance between the primary and disturbing body.
+
+The concept of the Sphere of Influence is not only useful as an intellectual tool to think about bodies, but is also used practically. A notable example is a spacecraft in a lunar mission, which has the same problem as Laplace: At what point do you switch from an Earth-centric reference frame to a lunar-centric reference frame? The answer is: When you arrive at the sphere of influence of the moon, which is where the gravitational effects of the moon start dominating over those of the Earth.
+
+![[SOI_lunar.png]]
+
+The Sphere of Influence **not** the same thing as the [[Hill sphere]], although the concepts are closely related.
 
 ___
