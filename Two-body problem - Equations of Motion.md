@@ -1,0 +1,5 @@
+# Two-body problem - Equations of Motion
+
+This section forms the start of a foray into the properties of the two body problem. Even though in reality you almost never deal with a system that is influenced by merely two bodies, it is often the case that you can reliably simplify some $N$-body system to a two-body system, where the influence of the other $N-2$ bodies are neglected. 
+
+For example, when designing an orbital transfer from Earth to the moon, as a first order approximation you can neglect the influence of all the other planets, as well as the sun. This collapses an N-body problem into a simple two-body problem, which [[The N-body problem#Introduction|as we've seen before]] means that you can now describe it with a closed-form expression. On our journey through the properties of the two-body problem we will make use of this, and amass a [[Two-body Roadmap|useful collection of equations]] that can help us design simple orbital trajectories.

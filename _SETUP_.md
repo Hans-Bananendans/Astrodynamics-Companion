@@ -23,14 +23,14 @@ ___
 ## Knowledge layout
 Chapter 1: 
 - [x] Chapter 1: [[Newtonian Mechanics]] (1.1-1.6, 1.8)
-- [ ] Chapter 2: N-body problem
+- [x] Chapter 2: N-body problem
 	- [x] N-body integrals of motion (2.1)
 	- [x] Relative motion to the barycenter (2.2)
 	- [x] Pseudo-inertial reference frames (2.6)
-	- [ ] Two-body angular momentum (2.7)
+	- [x] Two-body angular momentum (2.7)
 - [ ] Chapter 4: N-body relative motion
-	- [ ] Equations of motion (4.1)
-	- [ ] Relative perturbing acceleration of the Earth and of an Earth satellites (4.2)
+	- [x] Equations of motion (4.1)
+	- [x] Relative perturbing acceleration of the Earth and of an Earth satellites (4.2)
 	- [ ] Sphere of influence (4.3)
 - [ ] Chapter 5: Two-body problem (5.1-5.11)
 - [ ] Chapter 6: Elliptical orbits (6.1-6.4)
