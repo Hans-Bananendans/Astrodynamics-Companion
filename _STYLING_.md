@@ -19,7 +19,7 @@ See [markdown cheat sheet](https://www.markdownguide.org/cheat-sheet)
 
 
 ## Standard Admonition elements
-[FontAwesome icon repo](https://fontawesome.com/v6.0/icons?q=construction&s=solid%2Cbrands) (not all work!).
+[FontAwesome icon repo](https://fontawesome.com/v6.0/icons?q=construction&s=solid%2Cbrands) (not all icons work!).
 
 Note block
 ```ad-note
