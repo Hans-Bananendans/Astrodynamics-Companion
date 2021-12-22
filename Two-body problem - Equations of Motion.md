@@ -33,6 +33,8 @@ color: 200,80,225
 This allows us to write the gravitational parameter as:
 $$\mu \approx G m_k \left( 1 + 0\right) = Gm_k\tag{w5.4}$$
 
+This turns our two-body problem into the so-called **restricted two-body problem**, because we assume that $\mu$ is only dependant on the mass of the more massive body. We weaken the applicability of the theory by doing this, because we won't be able to use our equations to calculate the motion of a [binary star system](https://en.wikipedia.org/wiki/Binary_star#Astrophysics), where the two stars have comparable masses, and the aforementioned assumption is clearly no longer valid. But it turns out that the restricted two-body problem has many uses for space engineering and mission design.
+
 With these equations as starting point, we can derive some very useful conservation laws.
 ___
 
@@ -83,3 +85,93 @@ It can also be used to verify your answer, by checking whether the internal ener
 
 
 ### Deriving Kepler's Second Law
+To derive Kepler's second law we take a similar approach to how you [[Derivation - N-body constant angular momentum|derive the constant angular momentum property]] of an N-body system. We start by taking the cross product of $\bar{r}$ and $\text{w5.3}$:
+
+$$\bar{r} \times \dfrac{d^2\bar{r}}{dt^2} + \dfrac{\mu}{r^3} \cancel{\bar{r} \times \bar{r}}^{\;=\:0} = 0$$
+
+Given [[Vector Identities#Vector identity 4|vector identity 4]], we know that any vector crossed with itself equals zero. This means that the second term nullifies and we are only left with the first term:
+
+$$\bar{r} \times \dfrac{d^2\bar{r}}{dt^2} = 0$$
+
+It turns out we can also write this like so:
+$$\dfrac{d}{dt}\left( \bar{r} \times \dot{\bar{r}}\right) = 0$$
+
+```ad-note
+title: How is this possible?
+icon: paperclip
+collapse: closed
+color: 180,180,180
+
+Why are we allowed to write that
+$$\bar{r} \times \dfrac{d^2\bar{r}}{dt^2} \tag{r1}$$
+is equivalent to
+$$\dfrac{d}{dt}\left( \bar{r} \times \dot{\bar{r}}\right) \tag{r2}$$
+
+The answer is that we have actually applied the product rule but in reverse. Let's pretend we want to perform the derivation in $\text{r2}$. To do it, we would apply the product rule, right?
+
+$$\dfrac{d}{dt}\left( \bar{r} \times \dot{\bar{r}}\right) = \dot{\bar{r}} \times \dot{\bar{r}} + \bar{r} \times \ddot{\bar{r}} \tag{r3}$$
+
+By virtue of [[Vector Identities#Vector identity 4|vector identity 4]], the middle term equals zero:
+$$\dfrac{d}{dt}\left( \bar{r} \times \dot{\bar{r}}\right) = \cancel{\dot{\bar{r}} \times \dot{\bar{r}}}^{\;=\:0} + \bar{r} \times \ddot{\bar{r}} \tag{r4}$$
+$$\dfrac{d}{dt}\left( \bar{r} \times \dot{\bar{r}}\right) =  \bar{r} \times \ddot{\bar{r}} \tag{r5}$$
+or
+$$\dfrac{d}{dt}\left( \bar{r} \times \dot{\bar{r}}\right) = \bar{r} \times \dfrac{d^2\bar{r}}{dt^2} \tag{r6}$$
+
+
+
+```
+
+The first time derivative of $\bar{r}$ is simply the velocity $\bar{V}$, which we can substitute instead:
+
+$$\dfrac{d}{dt}\left( \bar{r} \times \bar{V}\right) = 0$$
+
+If we were to integrate both sides, the zero on the right-hand side simply becomes a constant. This constant is the **relative angular momentum** $\bar{h}$. And so we get:
+
+$$\bar{h} = \bar{r} \times \bar{V} \tag{w5.6}$$
+
+```ad-warning
+title: Angular momentum vs. specific angular momentum
+
+There is a source of confusion here that should be cleared up. In the astrodynamics, there are generally two flavours of angular momentum:
+1. The (classic) angular momentum, which is defined as:
+$$\bar{H} = \bar{r} \times m \bar{V}$$
+2. The **specific** angular momentum, which is the same as the classic angular momentum but **normalized for the mass**:
+$$\bar{h} = \dfrac{\bar{H}}{m} = \bar{r} \times \bar{V}$$
+
+We will frequently use the second definition, but the [[Wakker]] book uses $\bar{H}$ for **both types of momentum**, and just assumes that you can figure out yourself which one to use. I think this is needlessly confusing, and therefore throughout this whole companion, I will follow professor Cowan's convention, which uses the symbols as defined above; $\bar{H}$ denotes the (classic) angular momentum, whereas $\bar{h}$ denotes the **specific** angular momentum.
+```
+
+We have now in essence proven that the specific angular momentum for a restricted two-body system is constant. Of course [[Derivation - N-body constant angular momentum|we already knew that]], given that this is so for any N-body system. 
+
+To get to Kepler's second law, we're now going to split up the velocity vector $\bar{V}$ into a tangential component $\bar{V}_{\theta}$ and a radial component $\bar{V}_{r}$, as depicted below:
+![[velocity_components.png]]
+This we're going to substitute into $\text{w5.6}$:
+
+$$\bar{h} = \bar{r} \times \bar{V}$$
+$$ = \bar{r} \times (\bar{V_r}+\bar{V}_{\theta})$$
+$$ = \cancel{\bar{r} \times \bar{V_r}}^{\:=\:0} + \bar{r} \times \bar{V}_{\theta}$$
+
+If you look at the figure above, you'll see that vectors $\bar{r}$ and $\bar{V}_{r}$ are parallel, and so their cross product will be zero by definition. So we are left with the following:
+$$\bar{h} = \bar{r} \times \bar{V}_{\theta}$$
+
+We can collapse this vectorial function into a scalar function by noting from the figure above that the magnitude of $\bar{V}_{\theta}$ is equal to $r \dot{\theta}$. Given that we have already proven that the specific angular momentum of this system is zero, we get:
+$$h = r (r \dot{\theta}) = r^2 \dot{\theta} = \text{constant}\tag{w5.7}$$
+
+If you look at the figure again, you'll see that the motion of vector $\bar{r}$ over angle $\theta$ sweeps a certain area $A$. Let's consider this area, but instead let's take a very small angle $\theta$, so that the area $A$ resembles a triangle:
+![[kepler2_triangle.png]]
+The area $A$ of this triangle equals:
+$$A = \dfrac{1}{2} r^2 \cos(\theta) \sin(\theta)$$
+If we make theta infinitesimally small ($d\theta \rightarrow 0$), the area $dA$ becomes:
+$$dA = \dfrac{1}{2} r^2 \cos(d\theta) \cancel{\sin(d\theta)}^{\:\approx\:0}$$
+The sine of a very small angle is approximately 0, and the cosine of a very small angle is approximately equal to the angle, so we get:
+$$dA \approx \dfrac{1}{2} r^2 d\theta$$
+
+If we differentiate this equation with respect to time, we find that the change in area with respect to time is:
+$$\dfrac{dA}{dt} = \dfrac{1}{2} r^2 \dfrac{d\theta}{dt} = \dfrac{1}{2} r^2 \dot{\theta}$$
+
+Now if we substitute equation $\text{w5.7}$ in here, we get:
+$$\dfrac{dA}{dt} = \dfrac{1}{2} r^2 \dfrac{d\theta}{dt} = \dfrac{1}{2} h = \text{constant}$$
+This is **Kepler's second law**, and it essentially remarks that when a satellite moves around a large body over a certain period $dt$, its position vector will sweep the same area no matter where you are in the orbit. For definitions like this, it's always easier to have a picture, so here you have one:
+![[kepler2.png]]
+More animations and visualizations can be found [here](https://en.wikipedia.org/wiki/Kepler%27s_laws_of_planetary_motion#Second_law) and [here](https://ophysics.com/f6.html).
+___
