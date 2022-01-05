@@ -53,8 +53,9 @@ This companion is set up in such a way that **it does not matter whether you use
 
 ___
 ## Using this companion
-\< add description \>
+You are free to use this companion however suits you best. However, to use it as a proper "companion" to the material of the AE4874 course, you would do best to use the index in the `_INDEX_.md` file, which is also the recommended reading order. Not only does this reading order follow the structure of the lecture syllabus, it is also roughly the order in which the sections will be written, so that will likely be the most natural way to read it.
 
+In addition, you can use the index or Obsidian's search function to search the whole vault for topics or keywords.
 
 ___
 ## Contribution
