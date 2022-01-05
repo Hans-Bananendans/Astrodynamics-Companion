@@ -1,1 +1,0 @@
-# Conic sections - Elliptical orbits
