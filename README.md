@@ -6,7 +6,19 @@ An Obsidian Md vault containing a study companion / summary for the AE4874 Astro
 The contents of this repo are an [Obsidian Md](https://obsidian.md/) vault, which is a collection of interconnected markdown (.md) files. This creates a network of readable information that acts much like a local Wiki, or a web-book. In the terminology of Obsidian Md, such a collection of markdown files is called a **vault**.
 ___
 ## Progress
-![text](https://progress-bar.dev/45)
+
+| Topic         | Progress      |
+| ------------- |:-------------:|
+| Basic concepts | ![text](https://progress-bar.dev/100) |
+| N-body problem    | ![text](https://progress-bar.dev/100) |
+| Two-body problem    | ![text](https://progress-bar.dev/70) |
+| Three-body problem | ![text](https://progress-bar.dev/0) |
+| Standards of space and time | ![text](https://progress-bar.dev/0) |
+| Orbital transfers    | ![text](https://progress-bar.dev/0) |
+| Solar system transfers   | ![text](https://progress-bar.dev/0) |
+| Relative satellite motion | ![text](https://progress-bar.dev/0) |
+| Exercises | ![text](https://progress-bar.dev/5) |
+
 
 ___
 ## Quick start guide
