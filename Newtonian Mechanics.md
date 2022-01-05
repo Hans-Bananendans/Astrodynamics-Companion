@@ -1,6 +1,10 @@
 # Newtonian Mechanics
-<!-- This covers sections 1.1-1.8 from [[Wakker]] --> #chapter1
-
+<!-- This covers sections 1.1-1.8 from [[Wakker]] #chapter1 -->
+```ad-note
+title: ## ** !!! This section is still under construction !!! **
+icon: hammer
+color: 240,200,25
+```
 ___
 ## Newton's laws of motion
 <!-- [[Wakker]] section 1.1-->
@@ -10,19 +14,19 @@ Newton developed three laws of motion, which we now consider to be fundamental t
 _"Every particle continues in its state of rest or uniform motion in a straight line
 relative to an inertial reference frame, unless it is compelled to change that state by
 forces acting upon it."_
-$$\text{If} \quad \bar{F}_{net} = 0 \quad \text{then} \quad \dfrac{d\bar{v}}{dt} = 0 $$
+$$\text{If} \quad \bar{F}_{net} = 0 \quad \text{then} \quad \dfrac{d\bar{V}}{dt} = 0 $$
 
 #### Newton's second law
 _"The time rate of change of linear momentum of a particle relative to an inertial
 reference frame is proportional to the resultant of all forces acting upon that particle
 and is collinear with and in the direction of the resultant force."_
-$$\bar{F}_{net} = \dfrac{d\bar{p}}{dt} = \dfrac{d(m \cdot \bar{v})}{dt} $$
+$$\bar{F}_{net} = \dfrac{d\bar{p}}{dt} = \dfrac{d(m \cdot \bar{V})}{dt} $$
 In most of the theory considered in this summary, we assume that the mass of a body is constant, and in this case the time rate of change of the mass is zero. This reduces the above to:
-$$\bar{F}_{net} = m \cdot \dfrac{d\bar{v}}{dt} = m \cdot \bar{a}$$
+$$\bar{F}_{net} = m \cdot \dfrac{d\bar{V}}{dt} = m \cdot \bar{a}$$
 
 #### Newton's third law
 _"If two particles exert forces on each other, these forces are equal in magnitude and
-opposite in direction (action = reaction)."_
+opposite in direction (action = opposite reaction)."_
 $$\bar{F}_{A} = -\bar{F}_{B}$$
 
 ___
@@ -76,7 +80,8 @@ ___
 Just read section 2.6 of the [[Wakker|Wakker book]]. In essence, in reality we never deal with perfect point masses and perfect inertial reference frames. However, often the motion we are interested in is of such a scale that we can ignore the effects that the non-inertial reference frames cause. The book uses the following examples:
 - If you are considering the trajectory of a bullet, you can pretty much ignore the coriolis and centrifugal forces that are acting on the body because of the rotation of the Earth. These forces are tiny in comparison of the other forces on the bullet, and the flight time of the bullet is very small compared to the motion of the Earth. Instead, you can model it by sticking an inertial reference frame to the surface of the Earth.
 - If you are modelling a ballistic missile, you certainly cannot ignore the rotation of the Earth. However, you can probably ignore the effect of the Earth's rotation around the sun, and use a reference frame stuck to the centre of the Earth.
-In short, in reality we never deal with "true" inertial reference frames, but often we can get away with pretending that they are, depending on the size scale and time scale that we're considering. In such case, we speak of **pseudo-inertial reference frames**.
+
+In conclusion; in reality we never deal with "true" inertial reference frames, but often we can get away with pretending that they are, depending on the size scale and time scale that we're considering. In such case, we speak of **pseudo-inertial reference frames**.
 
 ___
 ## Chaotic motion

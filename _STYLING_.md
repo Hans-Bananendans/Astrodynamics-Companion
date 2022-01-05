@@ -17,6 +17,12 @@ See [markdown cheat sheet](https://www.markdownguide.org/cheat-sheet)
 6. Media (images, videos, etc) go in the media folder (`./media/`), which may be sorted or unsorted itself.
 7. Footnotes can be applied in the standard Markdown way (`[^1]`). The Markdown renderer automatically puts them at the very bottom of the page, and they cannot be easily sorted by section. However, each footnote has a clickable reference in the text, and a clickable return button at the footnote, so navigation is painless enough for this to be a problem.
 
+## Figure styling
+Figures should be set up such that they can be completely understood on both light and dark backgrounds. Ideally, a figure consists of a clear arrangement of coloured elements, with a transparent background. Png and other image formats that have an alpha channel are therefore preferable (and not jpgs, etc.).
+
+To ensure sufficient colour contrast on both light and dark backgrounds, you can use the colour chart defined below.
+![[styling.png]]
+A note regarding the neons: Each figure should be easily readable and simple to understand. Do not cram in as many things as you can, and if you have to use the neons to distinguish things, it could be an indication that you could be arranging your figures better. The more colours you use, the less distinct they appear to the reader. Therefore, try to use the neons as little as possible (they're ugly af anyway).
 
 ## Standard Admonition elements
 [FontAwesome icon repo](https://fontawesome.com/v6.0/icons?q=construction&s=solid%2Cbrands) (not all icons work!).
