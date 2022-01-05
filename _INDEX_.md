@@ -53,16 +53,49 @@
 	 - [[Orbital elements]]
 	 - [[Geocentric and geodetic latitude]]
 	 - [[Coordinate transformations]]
-9. **Position and time in conical sections** `(Wakker sections 6.5-6.7, 7.3-7.4, 8.3-8.5)`
-10. **Coplanar orbital transfers** `(Wakker sections 12.1-12.7)`
-11. **Inclined orbital transfers** `(Wakker sections 13.1-13.6)`
-12. **Lunar flight** `(Wakker sections 17.1-17.3)`
-13. **Interplanetary flight** `(Wakker sections 18.1-18.12)`
-14. **Circular restricted three-body problem** `(Wakker sections 3.1-3.4, 3.6-3.7, 3.11-3.13)`
-15. **Relative motion** `(Wakker sections 9.1-9.4)`
-16. **Phasing orbits** `(Wakker sections 14.1)`
-17. **Rendez-vous flights** `(Wakker sections 15.1-15.4)`
-18. **An introduction to perturbations** `(Wakker chapter 20)`
+9. **Coplanar orbital transfers** `(Wakker sections 12.1-12.7)`
+	- [[Coplanar transfers - Hohmann transfers]]
+	- [[Coplanar transfers - Faster transfers]]
+	- [[Coplanar transfers - Multiple Hohmann transfers]]
+	- [[Coplanar transfers - Hohmann between circular and elliptical orbits]]
+	- [[Coplanar transfers - Gravity losses]]
+10. **Inclined orbital transfers** `(Wakker sections 13.1-13.6)`
+	- [[Inclined transfers - Basic concepts]]
+	- [[Inclined transfers - Simple plane changes]]
+	- [[Inclined transfers - High altitude inclination change]]
+	- Recommended reading section `13.6` is skipped.
+11. **Lunar flight** `(Wakker sections 17.1-17.5)`
+ 	- [[The Earth-Moon system]]
+ 	- [[2D lunar transfers]]
+ 	- [[3D lunar transfers]]
+ 	- Section `17.5` is skipped here. Just read [[Wakker]] if you're interested.
+12. **Interplanetary flight** `(Wakker sections 18.1-18.12)`
+	- [[Interplanetary transfers - Basics]]
+	- [[Interplanetary transfers - Launch and arrival]]
+	- [[Interplanetary transfers - Optimal transfers]]
+	- [[Interplanetary transfers - Faster transfers]]
+	- [[Interplanetary transfers - Flybys]]
+	- [[Interplanetary transfers - Swingbys]]
+	- Sections `18.7-18.9, 18.12` are skipped for now.
+13. **Three-body problem** `(Wakker sections 3.1-3.4, 3.6-3.7, 3.11-3.13)`
+	- [[Three-body problem - Equations of Motion]]
+	- [[Three-body problem - Central configuration solutions]]
+	- [[Three-body problem - Circular restricted three-body problem]]
+	- [[Three-body problem - Jacobi's integral]]
+	- [[Three-body problem - Hill surfaces]]
+	- [[Three-body problem - Lagrange libration points]]
+	- Sections `3.11-3.13` are skipped here. Just read [[Wakker]] if you're interested.
+14. **Relative motion** `(Wakker sections 9.1-9.4)`
+	 - [[The Clohessy-Wiltshire equations]]
+	 - [[Satellite relative motion]]
+15. **Phasing orbits** `(Wakker sections 14.1)`
+	- [[Phasing orbits]]
+
+16. **Rendez-vous flights** `(Wakker sections 15.1-15.4)`
+	 - [[Rendez-vous flights]]
+
+17. **An introduction to perturbations** `(Wakker chapter 20)`
+	 - [[Perturbations]]
 ___
 - Equation sheet
 - Vector identities

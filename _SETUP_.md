@@ -53,7 +53,7 @@ Chapter 1:
 - [ ] Elliptical orbits parameters
 - [ ] Parabolic orbits parameters
 - [ ] Hyperbolic orbits parameters
-- [ ] Derivation: Ideal Rocket Equation
+- [x] Derivation: Ideal Rocket Equation
 - [x] Spherical trigonometry
 - [x] 3body simulator Python tutorial
 - [ ] Index/Reading order

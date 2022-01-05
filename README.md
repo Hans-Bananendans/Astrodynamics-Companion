@@ -4,6 +4,9 @@
 An Obsidian Md vault containing a study companion / summary for the AE4874 Astrodynamics course.
 
 The contents of this repo are an [Obsidian Md](https://obsidian.md/) vault, which is a collection of interconnected markdown (.md) files. This creates a network of readable information that acts much like a local Wiki, or a web-book. In the terminology of Obsidian Md, such a collection of markdown files is called a **vault**.
+___
+## Progress
+![text](https://progress-bar.dev/45)
 
 ___
 ## Quick start guide
@@ -39,6 +42,11 @@ This companion is set up in such a way that **it does not matter whether you use
 ___
 ## Using this companion
 \< add description \>
+
+
+___
+## Contribution
+If you are a fellow student and would like to contribute to this guide, feel free to contact me!
 
 ___
 ## Dependencies

@@ -7,7 +7,10 @@ In simple terms, the vis-viva equation tells us that the internal energy of any 
 
 $$\dfrac{1}{2}V^2 - \dfrac{\mu}{r} = \mathcal{E}$$
 
-Note that for elliptical orbits, the value of $\mathcal{E}$ is always **negative** by definition, and always positive for hyperbolic trajectories. For the special case of the parabolic orbit, the internal energy is zero.
+We call $\mathcal{E}$ the **specific orbital energy**. Note that for elliptical orbits, the value of $\mathcal{E}$ is always **negative** by definition, and always positive for hyperbolic trajectories. For the special case of the parabolic orbit, the internal energy is zero.
+
+If considering an **elliptical orbit**, the specific orbital energy $\mathcal{E}$ equals a constant $-\mu/2a$, and in that case the vis-viva equation can be reformulated to:
+$$\dfrac{1}{2}V^2 - \dfrac{\mu}{r} = -\dfrac{\mu}{2a}$$
 
 ___
 
