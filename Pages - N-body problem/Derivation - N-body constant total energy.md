@@ -49,7 +49,7 @@ If we now substitute $d\bar{r}_i/dt$ back in for $y$:
 
 $$\sum_i m_i \dfrac{d\bar{r}_i}{dt} \cdot \dfrac{d^2 \bar{r}_i}{dt^2}  = \dfrac{d}{dt} \left( \sum_i \dfrac{1}{2} m_i \dfrac{d \bar{r}_i}{dt} \cdot \dfrac{d \bar{r}_i}{dt} \right) \tag{r6}$$
 
-And [there it is](./media/there_it_is.gif). Remember equation $\text{r3}$ well, it will likely not be the last time you see this trick being used to manipulate differential operators.
+And [there it is](../media/there_it_is.gif). Remember equation $\text{r3}$ well, it will likely not be the last time you see this trick being used to manipulate differential operators.
 ```
 
 Remember that the derivative of the position vector $\bar{r}_i$ is equal to the velocity of $i$. With this, we can write the above as:
