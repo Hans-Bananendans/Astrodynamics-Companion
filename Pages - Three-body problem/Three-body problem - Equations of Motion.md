@@ -99,8 +99,153 @@ Okay, the mathematics check out, but who in their right mind would use this form
 
 The two-body term is simply the acceleration that $m_2$ experiences from $m_1$ pulling on it. There is a minus-sign in front of this term, because the acceleration points in **opposite direction** with respect to position vector $\bar{r}_{12}$. If this was a two-body problem, this would be the only term you would have.
 
-The other two terms are due to the third body being present. These accelerations point along their respective position vector and are therefore positive.
+The other two terms are due to the third body being present. These accelerations point **along** their respective position vector and are therefore positive.
 
 ___
 ## Equations of motion - Jacobi form
-Of course Jacobi thought all this was much too easy, and so he came up with a seemingly more convoluted, but ultimately more powerful formulation.
+Of course Jacobi thought all this was much too easy, and so he came up with a seemingly more convoluted, but ultimately more powerful formulation. To use this form, we do the following:
+1. Place the inertial reference frame at the [[N-body problem - Barycentric relative motion|barycentre]] $O$ of the three-body system.
+2. Draw a position vector $\bar{r}_{12}$ from body $m_1$ to body $m_2$.
+3. Locate the two-body barycentre of $m_1$ and $m_2$. We call this point $O_{12}$.
+4. Then we draw a vector $\bar{R}$ from $O_{12}$ that goes through $O$.
+5. Using this vector $\bar{R}$, we describe the position of body $m_3$. Because of the definition of the barycentre, you can **always** do this ($\bar{R}$ will never "miss" $m_3$).
+
+![[threebody_jacobi.png]]
+
+It turns out that you can write the equations of motion of this system **just** with  $\bar{r}_{12}$ and $\bar{R}$. This may not seem like much, but it's actually remarkable. The Euler and the Lagrange formulation both relied on three position vectors $\bar{r}$, but the Jacobi formulation has only two, and is still able to describe the whole system. 
+
+As we will see, you still end up with second-order differential equations, and so whereas the Euler and Lagrange formulations require 18 equations to solve completely (remember the [[N-body problem - Integrals of Motion|integrals of motion]]), by just rewriting the coordinate system to the Jacobi form you can reduce this number to only 12 equations. Mind you, it still does not allow you to solve the three-body problem in general, but it can be very insightful for several applications within the solar system, such as describing the Sun-Earth-Moon system.
+
+To use this form, we use a parameter $\alpha$, which is basically how much of the mass $m_1$ has relative to the $m_1$, $m_2$-system:
+$$\alpha = \dfrac{m_1}{m_1+m_2} \tag{w3.6}$$
+
+and we use $M$ for the total system mass:
+$$M = m_1 + m_2 + m_3$$
+
+```ad-note
+title: Add the derivation of the Jacobi formulation (see Wakker p. 48)
+icon: hammer
+color: 240,200,25
+```
+
+You can then write the equations of motion as:
+
+$$\dfrac{d^2 \bar{R}}{dt^2} = 
+- G \left[
+(m_1+m_2) \dfrac{\bar{r}_{12}  }{r^3_{12}}+m_3 \left( \dfrac{\bar{r}_{13}}{r^3_{13}} - \dfrac{\bar{r}_{23}}{r^3_{23}} \right) 
+\right] \tag{w3.9-1}$$
+
+$$\dfrac{d^2 \bar{r}_{12}}{dt^2} = 
+- G M \left[ \alpha \dfrac{\bar{r}_{13}}{r^3_{13}} +
+(1-\alpha)\dfrac{\bar{r}_{23}}{r^3_{23}}
+\right] \tag{w3.9-2}$$
+
+Which in 3D is a 12th-order system, as opposed to an 18th-order system. We can simplify the Jacobi form with some assumptions, which turn out to be very useful in practice. [[Wakker]] discusses two such cases: the **lunar case** and the **planetary case**.
+
+
+### Lunar case
+In the lunar case, we make use of the fact that there is a large mass difference and a large distance difference between the three bodies. We use the following convention:
+ - $m_1$: Moon
+ - $m_2$: Earth
+ - $m_3$: Sun
+
+Since the mass of the Earth ($6.0\times 10^{24}$ kg) is much larger than the mass of the Moon ($7.3\times 10^{22}$ kg) and therefore:
+
+$$\alpha = \dfrac{m_1}{m_1+m_2} \approx \dfrac{m_1}{m_1} = 1$$
+
+Furthermore, since the Earth-Moon distance ($4 \times 10^8$ m) is much smaller than the Earth-Sun distance ($1.5 \times 10^{11}$ m) we can asssume that:
+
+$$\bar{r}_{13} \approx \bar{r}_{23} \approx \bar{R}$$
+
+This collapses system $\text{w3.9}$ into a much simpler form:
+
+$$\dfrac{d^2 \bar{R}}{dt^2} = -G(m_1+m_2) \dfrac{\bar{r}_{12}}{r^3_{12}} $$
+
+$$\dfrac{d^2 \bar{r}_{12}}{dt^2} = - G M \dfrac{\bar{R}}{R^3}$$
+
+```ad-note
+title: Add math block for this "collapse"
+icon: hammer
+color: 240,200,25
+```
+
+![[threebody_jacobi_lunar.png]]
+
+### Planetary case
+In the planetary case, we use the following convention:
+ - $m_1$: Sun
+ - $m_2$: Earth
+ - $m_3$: Some other planet (in the solar system)
+
+
+Since the mass of the Earth ($6.0\times 10^{24}$ kg) is much smaller than the mass of the Sun ($2.0\times 10^{30}$ kg), we get:
+$$\alpha = \dfrac{m_1}{m_1+m_2} \approx \dfrac{m_1}{m_1} = 1$$
+
+For the same reason, the barycentre of the Sun-Earth system will lie very close to the position of the Sun ([in reality it is deep inside the sun](https://spaceplace.nasa.gov/barycenter/en/)), and so:
+
+$$\bar{r}_{13} \approx  \bar{R}$$
+
+Furthermore, you can assume that the other planet will have a much smaller mass than then sun, meaning that:
+
+$$\dfrac{m_3}{m_1+m_2} << 1$$
+
+This collapses system $\text{w3.9}$ into the same form as for the lunar case.
+
+
+```ad-note
+title: Add math block for this "collapse"
+icon: hammer
+color: 240,200,25
+```
+![[threebody_jacobi_planetary.png]]
+___
+
+## Summary - Three-body Equations of Motion
+
+```ad-summary
+title: Three forms of the three-body equations of motion
+
+**Euler form** (18th order system):
+
+$$\begin{cases}
+\dfrac{d^2 \bar{r}_1}{dt^2} = G \dfrac{m_2}{r^3_{12}} \bar{r}_{12} + G \dfrac{m_3}{r^3_{13}} \bar{r}_{13}\\
+\dfrac{d^2 \bar{r}_2}{dt^2} = G \dfrac{m_1}{r^3_{21}} \bar{r}_{21} + G \dfrac{m_3}{r^3_{23}} \bar{r}_{23}\\
+\dfrac{d^2 \bar{r}_3}{dt^2} = G \dfrac{m_1}{r^3_{31}} \bar{r}_{31} + G \dfrac{m_2}{r^3_{32}} \bar{r}_{32}\\
+\end{cases}$$
+
+
+**Lagrange form** (18th order system):
+$$\begin{cases}
+\dfrac{d^2 \bar{r}_{12}}{dt^2} = 
+G \left[
+m_3 \left( \dfrac{\bar{r}_{23}}{r^3_{23}} + \dfrac{\bar{r}_{13}}{r^3_{13}} \right) 
+- (m_1+m_2) \dfrac{\bar{r}_{12}  }{r^3_{12}} 
+\right] \\
+\dfrac{d^2 \bar{r}_{23}}{dt^2} = 
+G \left[
+m_1 \left( \dfrac{\bar{r}_{31}}{r^3_{31}} + \dfrac{\bar{r}_{12}}{r^3_{12}} \right) 
+- (m_2+m_3) \dfrac{\bar{r}_{23}  }{r^3_{23}} 
+\right] \\
+\dfrac{d^2 \bar{r}_{31}}{dt^2} = 
+G \left[
+m_2 \left( \dfrac{\bar{r}_{12}}{r^3_{12}} + \dfrac{\bar{r}_{23}}{r^3_{23}} \right) 
+- (m_3+m_1) \dfrac{\bar{r}_{31}  }{r^3_{31}} 
+\right] \\
+\end{cases}$$
+
+**Jacobi form** (12th order system):
+$$\begin{cases}
+\dfrac{d^2 \bar{R}}{dt^2} = 
+- G \left[
+(m_1+m_2) \dfrac{\bar{r}_{12}  }{r^3_{12}}+m_3 \left( \dfrac{\bar{r}_{13}}{r^3_{13}} - \dfrac{\bar{r}_{23}}{r^3_{23}} \right) 
+\right] \\
+\dfrac{d^2 \bar{r}_{12}}{dt^2} = 
+- G M \left[ \alpha \dfrac{\bar{r}_{13}}{r^3_{13}} +
+(1-\alpha)\dfrac{\bar{r}_{23}}{r^3_{23}}
+\right]
+\end{cases}$$
+with
+$$\alpha = \dfrac{m_1}{m_1+m_2} \hspace{2em} , \hspace{2em} M = m_1 + m_2 + m_3$$
+
+
+```
