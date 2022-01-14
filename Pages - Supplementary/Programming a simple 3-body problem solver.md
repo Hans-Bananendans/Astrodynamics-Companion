@@ -7,7 +7,7 @@ title: Warning!
 
 When you are first learning about Astrodynamics, trying to implement this software by yourself is a really good exercise for your own development. Before you read this tutorial, I would personally recommend that you look at the mathematical description of the problem and try to make your own implementation. If after a few hours, you are still stuck, this tutorial is a good resource to help you along. 
 
-But who am I kidding, [you're an adult](./media/adult.gif), you can do whatever you want, right?
+But who am I kidding, [you're an adult](../media/adult.gif), you can do whatever you want, right?
 
 ```
 

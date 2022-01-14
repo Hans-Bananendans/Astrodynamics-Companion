@@ -255,9 +255,7 @@ $$a_d = G \dfrac{m_d}{r_d^2}
 }  
 \tag{w4.11}$$
 
-God have mercy on you if you have to derive this one on the exam.
-![[thisisfine.png|200]]
-
+[God have mercy on you if you have to derive this on the exam](../media/thisisfine.png).
 ```
 
 So equation $\text{w4.11}$ is essentially written as a function of $\alpha$ and $\gamma$. Both variables are enclosed in the square root, with some factor $G m_d r_d^{-2}$ in front of it. If we plot this as function of $\alpha$ and $\gamma$, we get something that looks like this:
@@ -448,6 +446,6 @@ The concept of the Sphere of Influence is not only useful as an intellectual too
 
 ![[SOI_lunar.png]]
 
-The Sphere of Influence **not** the same thing as the [[Hill sphere]], although the concepts are closely related.
+The Sphere of Influence **not** the same thing as the [[Three-body problem - Hill surfaces|Hill sphere]], although the concepts are closely related.
 
 ___
