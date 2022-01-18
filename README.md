@@ -12,11 +12,11 @@ ___
 | Basic concepts | ![text](https://progress-bar.dev/100) |
 | N-body problem    | ![text](https://progress-bar.dev/100) |
 | Two-body problem    | ![text](https://progress-bar.dev/70) |
-| Three-body problem | ![text](https://progress-bar.dev/10) |
+| Three-body problem | ![text](https://progress-bar.dev/20) |
 | Standards of space and time | ![text](https://progress-bar.dev/0) |
 | Orbital transfers    | ![text](https://progress-bar.dev/15) |
 | Solar system transfers   | ![text](https://progress-bar.dev/5) |
-| Relative satellite motion | ![text](https://progress-bar.dev/0) |
+| Relative satellite motion | ![text](https://progress-bar.dev/5) |
 | Exercises | ![text](https://progress-bar.dev/5) |
 
 
