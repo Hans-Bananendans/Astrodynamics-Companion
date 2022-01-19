@@ -22,8 +22,8 @@ T = 10          # [s] Orbital time
 x0 = 0          # [m] initial x-position
 y0 = 0        # [m] initial y-position
 z0 = 0          # [m] initial z-position
-xdot0 = -0.5       # [m] initial x-velocity
-ydot0 = 0.5       # [m] initial y-velocity
+xdot0 = 0.5       # [m] initial x-velocity
+ydot0 = 0.0       # [m] initial y-velocity
 zdot0 = 0       # [m] initial z-velocity
 
 fx = 0          # [N] Force in x-direction
