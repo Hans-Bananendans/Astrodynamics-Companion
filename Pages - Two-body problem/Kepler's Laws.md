@@ -24,6 +24,9 @@ $$
 T^2 \propto a^3
 $$
 
+A form that one often encounters of Kepler's Third law is:
+$$\dfrac{a^3}{T^2} = \dfrac{\mu}{4 \pi^2}$$
+
 Furthermore, for any satellite in an elliptical orbit, you can compute the orbital period as:
 $$
 T = 2 \pi \sqrt{\dfrac{a^3}{\mu}}
