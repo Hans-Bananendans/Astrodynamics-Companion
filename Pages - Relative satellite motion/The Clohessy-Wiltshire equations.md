@@ -19,7 +19,7 @@ _"Both spacecraft are orbiting the planet in zero gravity. If the chaser wants t
 
 ![[cw_problem2.png]]
 
-Indeed, this is what many sci-fi movies will have you believe. But the crew of the chaser are in for a nasty surprise: In reality, this is **NOT** what will happen after they perform their thruster burn. Instead, what will happen is something like this:
+Indeed, this is what many sci-fi movies will have you believe. Just stick your thruster in the opposite direction, and you'll end up at the spacecraft. But the crew of the chaser are in for a nasty surprise: In reality, this is **NOT** what will happen after they perform their thruster burn. Instead, what will happen is something like this:
 
 ![[cw_problem3.png]]
 
