@@ -19,7 +19,7 @@ _"Both spacecraft are orbiting the planet in zero gravity. If the chaser wants t
 
 ![[cw_problem2.png]]
 
-Indeed, this is what many sci-fi movies will have you believe. But the crew of the chaser are in for a nasty surprise: In reality, this is **NOT** what will happen after they perform their thruster burn. Instead, what will happen is something like this:
+Indeed, this is what many sci-fi movies will have you believe. Just stick your thruster in the opposite direction, and you'll end up at the spacecraft. But the crew of the chaser are in for a nasty surprise: In reality, this is **NOT** what will happen after they perform their thruster burn. Instead, what will happen is something like this:
 
 ![[cw_problem3.png]]
 
@@ -102,7 +102,14 @@ While I don't find [[Wakker]] particularly helpful in building insight into this
 Instead, this section will focus on **supplementing** this lecture, particularly with some math blocks, coding exercises, and examples.
 ```
 ___
-## Title
+## Derivation
+
+To get started with deriving the Clohessy-Wiltshire equations, we first have to talk about reference frames. We are going to use the coordinate system from the [[Three-body problem - Circular restricted three-body problem|circular restricted 3-body problem]] (CR3BP), **BUT we will then modify it**.
+
+
+
+
+
 ___
 ## Sketch (delete afterwards)
 How altered frame layout is made (compared to CR3BP layout)
