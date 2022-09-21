@@ -393,6 +393,8 @@ $$ (a_d)_{max} = G \dfrac{m_d}{r_d^2}
 
 ```
 
+
+
 Finally, we can compare the perturbing accelerations of a primary body $k$ and a perturbing body $d$ by calculating the **maximum relative perturbing acceleration**:
 
 $$ \left(\dfrac{a_d}{a_k}\right)_{max} = \dfrac{m_d}{m_k} \left(\dfrac{r_k}{r_d}\right)^2 
@@ -411,6 +413,8 @@ color: 240,200,25
 It may be possible to combine the overly convoluted derivation in [[Wakker]] and the [simpler derivation on Wikipedia](https://en.wikipedia.org/wiki/Sphere_of_influence_(astrodynamics)#Derivation) together to create a derivation that is comprehensive but comprehensible.
 ```
 
+
+
 What we have seen in the previous section is that if you have a spacecraft that is located somewhere in relation to two bodies, it will experience a gravitational acceleration from either body. The magnitude of this acceleration depends on where exactly the spacecraft is located with respect to the two bodies. The question is now: when is it appropriate to describe the spacecraft's position in terms of the first body, and when in terms of the second body? When do the graviational effects of the one body take precedent over the other?
 
 This is a question that none other than Laplace himself considered, and he developed a concept called the **sphere of influence** (or SOI) as part of his answer. In essence, this is a circle (or a sphere in 3D space) around a body with mass. Inside the circle, the body's gravitational effects dominate, whilst outside the circle, those of the other body dominate. For the Earth and the sun, this looks something like this:
@@ -425,7 +429,7 @@ But even for a two-body case such as we consider here, the sphere of influence i
 The reason for this is that if you're between Earth and the sun, and you're moving toward the sun, the gravitational effects of the Sun will become dominant more quickly than if you were to move perpendicularly to the sun. It can be shown that the ratio between the two radii is:
 $$\dfrac{(r_{SOI})_{min}}{(r_{SOI})_{max}} \approx \left(\dfrac{1+3 \cos^2 (0^\circ)}{1+3 \cos^2 (90^\circ)} \right)^{-1/10} \approx 0.87$$
 
-However, it turns out that we commonly neglect this oblateness and just assume that the SOI is a perfect sphere. So we will do the same for now.
+Here I have used equation $\text{w4.25}$. However, it turns out that we commonly neglect this oblateness and just assume that the SOI is a perfect sphere. So we will do the same for now.
 ```ad-warning
 title: Assumption: The Sphere of Influence is a sphere!
 color: 200,80,225

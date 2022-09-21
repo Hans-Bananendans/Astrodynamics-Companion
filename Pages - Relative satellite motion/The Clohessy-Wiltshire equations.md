@@ -102,7 +102,14 @@ While I don't find [[Wakker]] particularly helpful in building insight into this
 Instead, this section will focus on **supplementing** this lecture, particularly with some math blocks, coding exercises, and examples.
 ```
 ___
-## Title
+## Derivation
+
+To get started with deriving the Clohessy-Wiltshire equations, we first have to talk about reference frames. We are going to use the coordinate system from the [[Three-body problem - Circular restricted three-body problem|circular restricted 3-body problem]] (CR3BP), **BUT we will then modify it**.
+
+
+
+
+
 ___
 ## Sketch (delete afterwards)
 How altered frame layout is made (compared to CR3BP layout)

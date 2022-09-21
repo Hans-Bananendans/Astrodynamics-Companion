@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+li#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
 cr3bp_potential.py
@@ -123,7 +123,7 @@ ax.set_xlim3d(-xscale,xscale)
 ax.set_ylim3d(-yscale,yscale)
 ax.set_zlim3d(-zscale,zscale)
 
-# Decorating the plot (yay!):
+# Decorating the plot:
 
 # Gray title
 ax.title.set_color('#CCCCCC')
