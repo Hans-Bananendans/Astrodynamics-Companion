@@ -1,34 +1,29 @@
 # N-body relative motion
 
-```ad-note
-title: ## ** !!! This section is still under construction !!! **
-icon: hammer
-color: 240,200,25
-To do:
- - [ ] Add derivation of Sphere of Influence 
-```
+> [!wip] ## ** !!! This section is still under construction !!! **
+> To do:
+>    - [ ] Add derivation of Sphere of Influence
+
 
 <!-- This covers sections 4.1-4.3 from [Wakker] -->
 In chapter 2 of the [[Wakker|Wakker book]], we dealt with the N-body problem and set up the equations of motions. However, those equations of motion were usually defined in terms of some arbitrary [[Newtonian Mechanics#Inertial reference frames|inertial reference frame]] or the inertial reference frame at the barycentre of the system.
 
 However, in reality you will hardly ever be interested in how all the bodies of an N-body system move in respect to a barycentre, but in how one particular body moves with respect to another. For example, how the moon rotates around the Earth in the many-body system of the solar system. Or, how a martian satellite mission orbits Mars (maybe in the presence of some moons). In such cases, we are interested in **relative motion**, motion in which the reference frames are often no longer inertial reference frames. This means that we cannot use the equations of motion that we derived previously, but have to make new ones.
 
-```ad-warning
-title: Warning! How not to look stupid on the exam:
 
-Be sure to understand _when_ you are dealing with relative motion, and _which_ equations you can and cannot use in that case. If you're trying to describe relative motion in general, but you use the equations that are only valid when working with inertial reference frames, you're almost certainly going to arrive at a wrong answer on the exam.
+> [!warning] Warning! How not to look stupid on the exam
+> Be sure to understand _when_ you are dealing with relative motion, and _which_ equations you can and cannot use in that case. If you're trying to describe relative motion in general, but you use the equations that are only valid when working with inertial reference frames, you're almost certainly going to arrive at a wrong answer on the exam.
+>   
+>   So this guy:
+>   $$m_i \dfrac{d^2 \bar{r}_i}{dt^2} = \sum_{j \neq i} G \dfrac{m_i m_j}{r^3_{ij}} \bar{r}_{ij} \tag{w2.3}$$
+>   
+>   or this guy:
+>   $$\dfrac{d^2 \bar{r}_i}{dt^2} =
+>   - G \dfrac{M}{r_i^3}\bar{r}_{i} +
+>   G \sum_{ j\neq i} m_j \left( \dfrac{1}{r^3_{ij}} -\dfrac{1}{r_i^3} \right) \bar{r}_{ij}  \tag{w2.21}$$
+>   
+>   Just throw those into the garbage for now. **Do not use them for relative motion**.
 
-So this guy:
-$$m_i \dfrac{d^2 \bar{r}_i}{dt^2} = \sum_{j \neq i} G \dfrac{m_i m_j}{r^3_{ij}} \bar{r}_{ij} \tag{w2.3}$$
-
-or this guy:
-$$\dfrac{d^2 \bar{r}_i}{dt^2} =
-- G \dfrac{M}{r_i^3}\bar{r}_{i} +
-G \sum_{ j\neq i} m_j \left( \dfrac{1}{r^3_{ij}} -\dfrac{1}{r_i^3} \right) \bar{r}_{ij}  \tag{w2.21}$$
-
-Just throw those into the garbage for now. **Do not use them for relative motion**.
-
-```
 ___
 ## Equations of motion
 <!-- [Wakker] section 4.1 -->
@@ -68,17 +63,16 @@ Now, this may look like a bunch of busywork, but what have we achieved here? Wel
 
 In other words, $\text{w4.4}$ is an equation of motion for body $i$, but **relative** to body $k$, and **not** the origin of $XYZ$. It is as though we put a reference frame at body $k$, although that would obviously be a non-inertial reference frame, since body $k$ is almost certainly not making a nice rectilinear motion with respect to the origin of $XYZ$.
 
-```ad-warning
-title: Warning!
 
-At this point K.F. Wakker drops some subscripts in [[Wakker|the book]]. He reasons: since we have written equation $\text{w4.4}$ fully with $k$ as reference point, we may as well drop the redundant subscripts $k$ henceforth, as long as we remember that we are operating from a reference frame at $k$. 
+> [!warning] Warning!
+> At this point K.F. Wakker drops some subscripts in [[Wakker|the book]]. He reasons: since we have written equation $\text{w4.4}$ fully with $k$ as reference point, we may as well drop the redundant subscripts $k$ henceforth, as long as we remember that we are operating from a reference frame at $k$. 
+> 
+> I have decided to follow Wakker's notation in this summary, because although it may take a while for you to get used to the notation, it will avoid confusion when reading this summary alongside the [[Wakker|Wakker book]].
+> 
+> With the change in notation, equation $\text{w4.4}$ now looks like:
+> $$\dfrac{d^2 \bar{r}_{i}}{dt^2} = - G \dfrac{m_i + m_k}{r_{i}^3}\bar{r}_{i}  + G \sum_{j \neq i,k} m_j \left( \dfrac{\bar{r}_{j} - \bar{r}_{i}}{r_{ij}^3} -  \dfrac{\bar{r}_{j} }{r_{ij}^3}\right) \tag{w4.4}$$
 
-I have decided to follow Wakker's notation in this summary, because although it may take a while for you to get used to the notation, it will avoid confusion when reading this summary alongside the [[Wakker|Wakker book]].
 
-With the change in notation, equation $\text{w4.4}$ now looks like:
-$$\dfrac{d^2 \bar{r}_{i}}{dt^2} = - G \dfrac{m_i + m_k}{r_{i}^3}\bar{r}_{i}  + G \sum_{j \neq i,k} m_j \left( \dfrac{\bar{r}_{j} - \bar{r}_{i}}{r_{ij}^3} -  \dfrac{\bar{r}_{j} }{r_{ij}^3}\right) \tag{w4.4}$$
-
-```
 
 I have redrawn the Figure 1 to illustrate the change in notation. All the vectors are now redefined to originate from $k$, even if this is not explicitly reflected in the subscripts.
 ![[relative_motion2.png|Figure 2: Points i and j described with respect to k]]
@@ -103,9 +97,7 @@ ___
 ## 	Relative perturbing acceleration of the Earth and of an Earth satellites
 <!-- [Wakker] section 4.2-->
 
-```ad-note
-title: Note: In this section, [[Wakker]] sometimes uses $a_m$ for the mass of the primary body. I instead use $a_k$ for internal consistency.
-```
+> [!note] Note: In this section, [[Wakker]] sometimes uses $a_m$ for the mass of the primary body. I instead use $a_k$ for internal consistency.
 
 In this section, we dive deeper into perturbed motion. As a model, we will consider a satellite labelled $i$ in an orbit around the Earth (labelled $k$). We center our reference frame at the center of the Earth. Imagine that we also consider the Sun, which will be the perturbing body $d$. Let's see what kinds of accelerations this satellite experiences as a result of this situation.
 
@@ -114,13 +106,10 @@ You can see the situation in the figure below. Note that the angle between $\bar
 ![[perturbation1.png]]
 
 Using equation $\text{w4.4}$, we can calculate the acceleration both of the primary motion around $k$, as well as the acceleration of the perturbation of $d$. 
-```ad-warning
-title: Assumption: Spacecraft mass is negligible
-color: 200,80,225
-Let's make the assumtion that the spacecraft mass is much smaller than the mass of the Earth and the Sun, and can be neglected during this analysis:
-$$m_i << m_k, m_d \quad \rightarrow \quad m_i \approx 0$$
 
-```
+> [!assumption] Assumption: Spacecraft mass is negligible
+> Let's make the assumtion that the spacecraft mass is much smaller than the mass of the Earth and the Sun, and can be neglected during this analysis:
+> $$m_i << m_k, m_d \quad \rightarrow \quad m_i \approx 0$$
 
 For the acceleration of the primary body we have according to $\text{w4.4}$:
 
@@ -133,30 +122,24 @@ $$a_k = G \dfrac{m_k}{r_{i}^2} \tag{w4.9}$$
 The perturbing acceleration we can also get from equation $\text{w4.4}$:
 $$a_d = G m_d \sqrt{\dfrac{1}{r_{id}^4} + \dfrac{1}{r_{d}^4} - \dfrac{2 \cos{\beta}}{r_{id}^2 r_{d}^2}} \tag{w4.10}$$
 
-```ad-note
-title: Math
-icon: paperclip
-collapse: closed
-color: 180,180,180
+> [!math]-
+> To find the perturbing acceleration, we look at the second term of equation $\text{w4.4}$, and modify it for the given situation. Since we have only one disturbing body, the summation is just one term.
+> 
+> $$ \bar{a}_d = G m_d  \left( \dfrac{\bar{r}_{d} - \bar{r}_{i}}{r_{id}^3} -  \dfrac{\bar{r}_{d} }{r_{id}^3}\right) \tag{r1}$$
+> 
+> Nice, but we would actually like to have a scalar form of this equation, rather than a vectorial form. This will allow us to compare the magnitude $a_d$ with $a_k$. So we simplify equation $\text{r1}$ by first substituting $\bar{r}_{id} = \bar{r}_d - \bar{r}_i$ and performing a little trick: Squaring the bracketed term, while at the same time taking the square root of it:
+> $$ \bar{a}_d = G  \left( \dfrac{\bar{r}_{id}}{r_{id}^3} -  \dfrac{\bar{r}_{d} }{r_{id}^3}\right) = G m_d \sqrt{\left( \dfrac{\bar{r}_{id}}{r_{id}^3} -  \dfrac{\bar{r}_{d} }{r_{id}^3}\right) \cdot \left( \dfrac{\bar{r}_{id}}{r_{id}^3} -  \dfrac{\bar{r}_{d} }{r_{id}^3}\right)} \tag{r2}$$
+> 
+> $$  = G m_d \sqrt{ \dfrac{\bar{r}_{id} \cdot \bar{r}_{id}}{r_{id}^6} + \dfrac{\bar{r}_{d} \cdot \bar{r}_{d} }{r_{id}^6} - 2 \dfrac{\bar{r}_d \cdot \bar{r}_{id}}{r_d^3 r_{id}^3}} \tag{r3}$$
+> 
+> Given [[Vector Identities#Vector identity 1|Vector identity 1]] and the definition of the [dot product](https://en.wikipedia.org/wiki/Dot_product), we can rewrite this to:
+> 
+> $$  = G m_d \sqrt{ \dfrac{r_{id}^2}{r_{id}^6} + \dfrac{r_{d}^2}{r_{id}^6} - 2 \dfrac{r_d r_{id} \cos\beta}{r_d^3 r_{id}^3}} = G m_d \sqrt{ \dfrac{1}{r_{id}^4} + \dfrac{1}{r_{id}^4} - \dfrac{2 \cos\beta}{r_d^2 r_{id}^2}} \tag{r4}$$
+> 
+> where $\beta$ is the angle between $\bar{r}_d^3$ and $\bar{r}_{id}^3$. At this point we have eliminated every vector, and we may write $\bar{a}_d$ as $a_d$:
+> 
+> $$ a_d = G m_d \sqrt{ \dfrac{1}{r_{id}^4} + \dfrac{1}{r_{id}^4} - \dfrac{2 \cos\beta}{r_d^2 r_{id}^2}} \tag{r5}$$
 
-To find the perturbing acceleration, we look at the second term of equation $\text{w4.4}$, and modify it for the given situation. Since we have only one disturbing body, the summation is just one term.
-
-$$ \bar{a}_d = G m_d  \left( \dfrac{\bar{r}_{d} - \bar{r}_{i}}{r_{id}^3} -  \dfrac{\bar{r}_{d} }{r_{id}^3}\right) \tag{r1}$$
-
-Nice, but we would actually like to have a scalar form of this equation, rather than a vectorial form. This will allow us to compare the magnitude $a_d$ with $a_k$. So we simplify equation $\text{r1}$ by first substituting $\bar{r}_{id} = \bar{r}_d - \bar{r}_i$ and performing a little trick: Squaring the bracketed term, while at the same time taking the square root of it:
-$$ \bar{a}_d = G  \left( \dfrac{\bar{r}_{id}}{r_{id}^3} -  \dfrac{\bar{r}_{d} }{r_{id}^3}\right) = G m_d \sqrt{\left( \dfrac{\bar{r}_{id}}{r_{id}^3} -  \dfrac{\bar{r}_{d} }{r_{id}^3}\right) \cdot \left( \dfrac{\bar{r}_{id}}{r_{id}^3} -  \dfrac{\bar{r}_{d} }{r_{id}^3}\right)} \tag{r2}$$
-
-$$  = G m_d \sqrt{ \dfrac{\bar{r}_{id} \cdot \bar{r}_{id}}{r_{id}^6} + \dfrac{\bar{r}_{d} \cdot \bar{r}_{d} }{r_{id}^6} - 2 \dfrac{\bar{r}_d \cdot \bar{r}_{id}}{r_d^3 r_{id}^3}} \tag{r3}$$
-
-Given [[Vector Identities#Vector identity 1|Vector identity 1]] and the definition of the [dot product](https://en.wikipedia.org/wiki/Dot_product), we can rewrite this to:
-
-$$  = G m_d \sqrt{ \dfrac{r_{id}^2}{r_{id}^6} + \dfrac{r_{d}^2}{r_{id}^6} - 2 \dfrac{r_d r_{id} \cos\beta}{r_d^3 r_{id}^3}} = G m_d \sqrt{ \dfrac{1}{r_{id}^4} + \dfrac{1}{r_{id}^4} - \dfrac{2 \cos\beta}{r_d^2 r_{id}^2}} \tag{r4}$$
-
-where $\beta$ is the angle between $\bar{r}_d^3$ and $\bar{r}_{id}^3$. At this point we have eliminated every vector, and we may write $\bar{a}_d$ as $a_d$:
-
-$$ a_d = G m_d \sqrt{ \dfrac{1}{r_{id}^4} + \dfrac{1}{r_{id}^4} - \dfrac{2 \cos\beta}{r_d^2 r_{id}^2}} \tag{r5}$$
-
-```
 
 ### The influence of $\alpha$ and $\gamma$ on $a_d$
 It turns out that we can derive a grotesque but quite useful equation. This equation will describe the perturbing acceleration $a_d$ as a function of the distance ratio of the primary and disturbing body, and of the angle $\alpha$. To derive this equation, we will need two geometric compatibilities.
@@ -181,122 +164,111 @@ $$a_d = G \dfrac{m_d}{r_d^2}
 In this equation, we have introduced a quantity $\gamma$, which is the aforementioned distance ratio:
 $$\gamma = \dfrac{r_i}{r_d}$$
 
-```ad-note
-title: Math
-icon: paperclip
-collapse: closed
-color: 180,180,180
+> [!math]-
+> Start with:
+>   
+>   $$a_d = G m_d \sqrt{\dfrac{1}{r_{id}^4} + \dfrac{1}{r_{d}^4} - \dfrac{2 \cos{\beta}}{r_{id}^2 r_{d}^2}} \tag{w4.10}$$
+>   
+>   and 
+>   
+>   $$
+>   \gamma = r_i / r_d
+>   \hspace{2em} , \hspace{2em} 
+>   \cos{\beta} = \dfrac{r_d - r_i \cos{\alpha}}{r_{id}} 
+>   \hspace{2em} , \hspace{2em} 
+>   r_{id}^2 = r_{i}^2 + r_{d}^2 - 2 r_{i} r_{d} \cos \alpha \tag{r1}$$
+>   
+>   Simply substitute the equations $\text{r1}$ into $\text{w4.10}$:
+>   
+>   $$a_d = G m_d \sqrt{\dfrac{1}{r_{id}^4} + \dfrac{1}{r_{d}^4} - \dfrac{2 (r_d - r_i \cos{\alpha})}{r_{id}^3 r_{d}^2}} \tag{r2}$$
+>   
+>   
+>   $$ = G m_d \sqrt{\dfrac{1}{[r_{i}^2 + r_{d}^2 - 2 r_{i} r_{d} \cos \alpha]^2} + \dfrac{1}{r_{d}^4} - \dfrac{2 (r_d - r_i \cos{\alpha})}{r_{d}^2 [r_{i}^2 + r_{d}^2 - 2 r_{i} r_{d} \cos \alpha]^{3/2}}} \tag{r3}$$
+>   
+>   For our first trick, we will multiply everything inside the square root by $r_{d}^4$ divided by itself. The numerator we will use to manipulate the fractions, whilst the denominator we will extract from the square root:
+>   $$ a_d = G m_d \sqrt{ \dfrac{r_{d}^4}{r_{d}^4} \left\{ \dfrac{1}{[r_{i}^2 + r_{d}^2 - 2 r_{i} r_{d} \cos \alpha]^2} + \dfrac{1}{r_{d}^4} - \dfrac{2 (r_d - r_i \cos{\alpha})}{r_{d}^2 [r_{i}^2 + r_{d}^2 - 2 r_{i} r_{d} \cos \alpha]^{3/2}} \right\} }  \tag{r4}$$
+>   
+>   $$ = G \dfrac{m_d}{r_{d}^2} \sqrt{  \dfrac{r_{d}^4}{[r_{i}^2 + r_{d}^2 - 2 r_{i} r_{d} \cos \alpha]^2} + 
+>   \dfrac{r_{d}^4}{r_{d}^4} - 
+>   \dfrac{2 (r_d - r_i \cos{\alpha}) r_{d}^4}{r_{d}^2 [r_{i}^2 + r_{d}^2 - 2 r_{i} r_{d} \cos \alpha]^{3/2}} }  \tag{r5}$$
+>   
+>   The middle term inside the square root is easy to deal with, but the two others look pretty hairy. Let's look at them separately:
+>   $$ \text{SQRT TERM \#1} = \dfrac{r_{d}^4}{[r_{i}^2 + r_{d}^2 - 2 r_{i} r_{d} \cos \alpha]^2} \hspace{8em}$$
+>   
+>   $$= \dfrac{1/r_{d}^4}{1/r_{d}^4} \cdot \dfrac{r_{d}^4}{[r_{i}^2 + r_{d}^2 - 2 r_{i} r_{d} \cos \alpha]^2}$$
+>   
+>   $$ = \dfrac{1}{1/r_{d}^4 \cdot[r_{i}^2 + r_{d}^2 - 2 r_{i} r_{d} \cos \alpha]^2}$$
+>   
+>   $$ = \dfrac{1}{[1/r_{d}^2 \cdot (r_{i}^2 + r_{d}^2 - 2 r_{i} r_{d} \cos \alpha)]^2}$$
+>   
+>   $$ = \dfrac{1}{[r_{i}^2/r_{d}^2 + r_{d}^2/r_{d}^2 - 2 \cdot r_{i}/r_{d} \cdot r_{d}/r_{d} \cdot \cos \alpha]^2}$$
+>   
+>   $$ = \dfrac{1}{[\gamma^2 + 1 - 2 \gamma \cos \alpha]^2} \tag{r6}$$
+>   
+>   And for the other term:
+>   $$ \text{SQRT TERM \#3} = \dfrac{2 (r_d - r_i \cos{\alpha}) r_{d}^4}{r_{d}^2 [r_{i}^2 + r_{d}^2 - 2 r_{i} r_{d} \cos \alpha]^{3/2}} \hspace{8em}$$
+>   
+>   $$ = \dfrac{2 (r_d - r_i \cos{\alpha}) r_{d}^2}{[r_{i}^2 + r_{d}^2 - 2 r_{i} r_{d} \cos \alpha]^{3/2}}$$
+>   
+>   $$ = \dfrac{1/r_{d}}{1/r_{d}} \cdot \dfrac{1/r_{d}^2}{1/r_{d}^2} \cdot \dfrac{2 (r_d - r_i \cos{\alpha}) r_{d}^2}{[r_{i}^2 + r_{d}^2 - 2 r_{i} r_{d} \cos \alpha]^{3/2}}$$
+>   
+>   $$ = \dfrac{1/r_{d}}{1/r_{d}} \cdot \dfrac{2 (r_d - r_i \cos{\alpha}) }{1/r_{d}^2 \cdot [r_{i}^2 + r_{d}^2 - 2 r_{i} r_{d} \cos \alpha]^{3/2}}$$
+>   
+>   $$ = \dfrac{1/r_{d} \cdot 2 (r_d - r_i \cos{\alpha})}{1/r_{d}^3 \cdot [r_{i}^2 + r_{d}^2 - 2 r_{i} r_{d} \cos \alpha]^{3/2}}$$
+>   
+>   $$ = \dfrac{2 (r_d/r_d - r_i/r_d \cdot \cos{\alpha}) }{[1/r_{d}^2 \cdot (r_{i}^2 + r_{d}^2 - 2 r_{i} r_{d} \cos \alpha)]^{3/2}}$$
+>   
+>   $$ = \dfrac{2 (r_d/r_d - r_i/r_d \cdot \cos{\alpha}) }{[r_{i}^2/r_{d}^2 + r_{d}^2/r_{d}^2 - 2 \cdot r_{i}/r_{d} \cdot r_{d}/r_{d} \cdot \cos \alpha]^{3/2}}$$
+>   
+>   $$ = \dfrac{2 (1 - \gamma \cos{\alpha}) }{[\gamma^2 + 1 - 2 \gamma \cos \alpha]^{3/2}} \tag{r7}$$
+>   
+>   
+>   If we substitute $\text{r6}$ and $\text{r7}$ back into equation $\text{r5}$, we get:
+>   
+>   $$a_d = G \dfrac{m_d}{r_d^2} 
+>   \sqrt{
+>   1 +
+>   \dfrac{1}{[1+\gamma^2 - 2 \gamma \cos(\alpha)]^2} -
+>   \dfrac{2(1-\gamma \cos(\alpha))}{[1+\gamma^2 - 2 \gamma \cos(\alpha)]^{3/2}}
+>   }  
+>   \tag{w4.11}$$
+>   
+>   [May God have mercy on you if you have to derive this on the exam](../media/thisisfine.png).
 
-Start with:
-
-$$a_d = G m_d \sqrt{\dfrac{1}{r_{id}^4} + \dfrac{1}{r_{d}^4} - \dfrac{2 \cos{\beta}}{r_{id}^2 r_{d}^2}} \tag{w4.10}$$
-
-and 
-
-$$
-\gamma = r_i / r_d
-\hspace{2em} , \hspace{2em} 
-\cos{\beta} = \dfrac{r_d - r_i \cos{\alpha}}{r_{id}} 
-\hspace{2em} , \hspace{2em} 
-r_{id}^2 = r_{i}^2 + r_{d}^2 - 2 r_{i} r_{d} \cos \alpha \tag{r1}$$
-
-Simply substitute the equations $\text{r1}$ into $\text{w4.10}$:
-
-$$a_d = G m_d \sqrt{\dfrac{1}{r_{id}^4} + \dfrac{1}{r_{d}^4} - \dfrac{2 (r_d - r_i \cos{\alpha})}{r_{id}^3 r_{d}^2}} \tag{r2}$$
-
-
-$$ = G m_d \sqrt{\dfrac{1}{[r_{i}^2 + r_{d}^2 - 2 r_{i} r_{d} \cos \alpha]^2} + \dfrac{1}{r_{d}^4} - \dfrac{2 (r_d - r_i \cos{\alpha})}{r_{d}^2 [r_{i}^2 + r_{d}^2 - 2 r_{i} r_{d} \cos \alpha]^{3/2}}} \tag{r3}$$
-
-For our first trick, we will multiply everything inside the square root by $r_{d}^4$ divided by itself. The numerator we will use to manipulate the fractions, whilst the denominator we will extract from the square root:
-$$ a_d = G m_d \sqrt{ \dfrac{r_{d}^4}{r_{d}^4} \left\{ \dfrac{1}{[r_{i}^2 + r_{d}^2 - 2 r_{i} r_{d} \cos \alpha]^2} + \dfrac{1}{r_{d}^4} - \dfrac{2 (r_d - r_i \cos{\alpha})}{r_{d}^2 [r_{i}^2 + r_{d}^2 - 2 r_{i} r_{d} \cos \alpha]^{3/2}} \right\} }  \tag{r4}$$
-
-$$ = G \dfrac{m_d}{r_{d}^2} \sqrt{  \dfrac{r_{d}^4}{[r_{i}^2 + r_{d}^2 - 2 r_{i} r_{d} \cos \alpha]^2} + 
-\dfrac{r_{d}^4}{r_{d}^4} - 
-\dfrac{2 (r_d - r_i \cos{\alpha}) r_{d}^4}{r_{d}^2 [r_{i}^2 + r_{d}^2 - 2 r_{i} r_{d} \cos \alpha]^{3/2}} }  \tag{r5}$$
-
-The middle term inside the square root is easy to deal with, but the two others look pretty hairy. Let's look at them separately:
-$$ \text{SQRT TERM \#1} = \dfrac{r_{d}^4}{[r_{i}^2 + r_{d}^2 - 2 r_{i} r_{d} \cos \alpha]^2} \hspace{8em}$$
-
-$$= \dfrac{1/r_{d}^4}{1/r_{d}^4} \cdot \dfrac{r_{d}^4}{[r_{i}^2 + r_{d}^2 - 2 r_{i} r_{d} \cos \alpha]^2}$$
-
-$$ = \dfrac{1}{1/r_{d}^4 \cdot[r_{i}^2 + r_{d}^2 - 2 r_{i} r_{d} \cos \alpha]^2}$$
-
-$$ = \dfrac{1}{[1/r_{d}^2 \cdot (r_{i}^2 + r_{d}^2 - 2 r_{i} r_{d} \cos \alpha)]^2}$$
-
-$$ = \dfrac{1}{[r_{i}^2/r_{d}^2 + r_{d}^2/r_{d}^2 - 2 \cdot r_{i}/r_{d} \cdot r_{d}/r_{d} \cdot \cos \alpha]^2}$$
-
-$$ = \dfrac{1}{[\gamma^2 + 1 - 2 \gamma \cos \alpha]^2} \tag{r6}$$
-
-And for the other term:
-$$ \text{SQRT TERM \#3} = \dfrac{2 (r_d - r_i \cos{\alpha}) r_{d}^4}{r_{d}^2 [r_{i}^2 + r_{d}^2 - 2 r_{i} r_{d} \cos \alpha]^{3/2}} \hspace{8em}$$
-
-$$ = \dfrac{2 (r_d - r_i \cos{\alpha}) r_{d}^2}{[r_{i}^2 + r_{d}^2 - 2 r_{i} r_{d} \cos \alpha]^{3/2}}$$
-
-$$ = \dfrac{1/r_{d}}{1/r_{d}} \cdot \dfrac{1/r_{d}^2}{1/r_{d}^2} \cdot \dfrac{2 (r_d - r_i \cos{\alpha}) r_{d}^2}{[r_{i}^2 + r_{d}^2 - 2 r_{i} r_{d} \cos \alpha]^{3/2}}$$
-
-$$ = \dfrac{1/r_{d}}{1/r_{d}} \cdot \dfrac{2 (r_d - r_i \cos{\alpha}) }{1/r_{d}^2 \cdot [r_{i}^2 + r_{d}^2 - 2 r_{i} r_{d} \cos \alpha]^{3/2}}$$
-
-$$ = \dfrac{1/r_{d} \cdot 2 (r_d - r_i \cos{\alpha})}{1/r_{d}^3 \cdot [r_{i}^2 + r_{d}^2 - 2 r_{i} r_{d} \cos \alpha]^{3/2}}$$
-
-$$ = \dfrac{2 (r_d/r_d - r_i/r_d \cdot \cos{\alpha}) }{[1/r_{d}^2 \cdot (r_{i}^2 + r_{d}^2 - 2 r_{i} r_{d} \cos \alpha)]^{3/2}}$$
-
-$$ = \dfrac{2 (r_d/r_d - r_i/r_d \cdot \cos{\alpha}) }{[r_{i}^2/r_{d}^2 + r_{d}^2/r_{d}^2 - 2 \cdot r_{i}/r_{d} \cdot r_{d}/r_{d} \cdot \cos \alpha]^{3/2}}$$
-
-$$ = \dfrac{2 (1 - \gamma \cos{\alpha}) }{[\gamma^2 + 1 - 2 \gamma \cos \alpha]^{3/2}} \tag{r7}$$
-
-
-If we substitute $\text{r6}$ and $\text{r7}$ back into equation $\text{r5}$, we get:
-
-$$a_d = G \dfrac{m_d}{r_d^2} 
-\sqrt{
-1 +
-\dfrac{1}{[1+\gamma^2 - 2 \gamma \cos(\alpha)]^2} -
-\dfrac{2(1-\gamma \cos(\alpha))}{[1+\gamma^2 - 2 \gamma \cos(\alpha)]^{3/2}}
-}  
-\tag{w4.11}$$
-
-[God have mercy on you if you have to derive this on the exam](../media/thisisfine.png).
-```
 
 So equation $\text{w4.11}$ is essentially written as a function of $\alpha$ and $\gamma$. Both variables are enclosed in the square root, with some factor $G m_d r_d^{-2}$ in front of it. If we plot this as function of $\alpha$ and $\gamma$, we get something that looks like this:
 ![[hell_equation_colours.png]]
 
-````ad-abstract
-title: Plot code
-icon: python
-collapse: closed
-color: 45,215,60
+> [!python]- Plot code
+> ```py
+> import numpy as np
+> import matplotlib.pyplot as plt
+> 
+> def a_d(alpha, gamma, G=1, rd=1, mj=1):
+>     q1 = 1/(1+gamma**2 - 2*gamma*np.cos(alpha))**2
+>     q2 = 2*(1-gamma*np.cos(alpha))/(1+gamma**2 - 2*gamma*np.cos(alpha))**(3/2)
+>     return G*mj/rd**2*np.sqrt(1+q1-q2)
+> 
+> alpha = np.linspace(0,np.pi,20)
+> gamma = np.logspace(-2,5,20)
+> 
+> ag_surface = np.zeros((len(alpha), len(gamma)))
+> 
+> for Alpha in range(len(alpha)):
+>     for Gamma in range(len(gamma)):
+>         ag_surface[Alpha,Gamma] = a_d(alpha[Alpha],gamma[Gamma])
+>         
+> fig, ax = plt.subplots()
+> plot1 = ax.pcolormesh(gamma, alpha, ag_surface, shading='auto')
+> plt.xscale("log")
+> plt.xlim(min(gamma),max(gamma))
+> plt.ylim(min(alpha),max(alpha))
+> plt.xlabel("r_i / r_d")
+> plt.ylabel("alpha [rad]")
+> 
+> fig.colorbar(plot1)
+> ```
 
-```py
-import numpy as np
-import matplotlib.pyplot as plt
-
-def a_d(alpha, gamma, G=1, rd=1, mj=1):
-    q1 = 1/(1+gamma**2 - 2*gamma*np.cos(alpha))**2
-    q2 = 2*(1-gamma*np.cos(alpha))/(1+gamma**2 - 2*gamma*np.cos(alpha))**(3/2)
-    return G*mj/rd**2*np.sqrt(1+q1-q2)
-
-alpha = np.linspace(0,np.pi,20)
-gamma = np.logspace(-2,5,20)
-
-ag_surface = np.zeros((len(alpha), len(gamma)))
-
-for Alpha in range(len(alpha)):
-    for Gamma in range(len(gamma)):
-        ag_surface[Alpha,Gamma] = a_d(alpha[Alpha],gamma[Gamma])
-        
-fig, ax = plt.subplots()
-plot1 = ax.pcolormesh(gamma, alpha, ag_surface, shading='auto')
-plt.xscale("log")
-plt.xlim(min(gamma),max(gamma))
-plt.ylim(min(alpha),max(alpha))
-plt.xlabel("r_i / r_d")
-plt.ylabel("alpha [rad]")
-
-fig.colorbar(plot1)
-```
-
-````
 
 The plot suggests that most of the interesting stuff, namely the highest perturbing accelerations, happen where $\alpha$ is close to $0^\circ$, and $\gamma$ is of order of magnitude of $10^0$. The [[Wakker|book]] takes a more analytical approach, and mentions the following points:
 
@@ -321,79 +293,70 @@ $$ (a_d)_{max} = G \dfrac{m_d}{r_d^2}
 \left| \dfrac{1}{(1-\gamma)^2} -1 \right| 
 \tag{w4.12}$$
 
-```ad-note
-title: Math
-icon: paperclip
-collapse: closed
-color: 180,180,180
-
-Substitute $\alpha = 0^\circ$ into $\text{w4.11}$:
-$$a_d = G \dfrac{m_d}{r_d^2} 
-\sqrt{
-1 +
-\dfrac{1}{[1+\gamma^2 - 2 \gamma \cos(0^\circ)]^2} -
-\dfrac{2(1-\gamma \cos(0^\circ))}{[1+\gamma^2 - 2 \gamma \cos(0^\circ)]^{3/2}}
-} \tag{r1}$$
-
-$$ = G \dfrac{m_d}{r_d^2} 
-\sqrt{
-1 +
-\dfrac{1}{[1+\gamma^2 - 2 \gamma]^2} -
-\dfrac{2(1-\gamma )}{[1+\gamma^2 - 2 \gamma]^{3/2}}
-}  
-\tag{r2}$$
-
-$$ = G \dfrac{m_d}{r_d^2} 
-\sqrt{
-1 +
-\dfrac{1}{[(1-\gamma)^2]^2} -
-\dfrac{2(1-\gamma )}{[(1-\gamma)^2]^{3/2}}
-}  
-\tag{r3}$$
-
-$$ = G \dfrac{m_d}{r_d^2} 
-\sqrt{
-1 +
-\dfrac{1}{[(1-\gamma)^2]^2} -
-\dfrac{2(1-\gamma )}{(1-\gamma)^3}
-}  
-\tag{r3}$$
-
-$$ = G \dfrac{m_d}{r_d^2} 
-\sqrt{
-1^2 +
-\left[ \dfrac{1}{(1-\gamma)^2}\right]^2 -
-2 \cdot \left [\dfrac{1}{(1-\gamma)^2} \right]
-}  
-\tag{r5}$$
-
-
-At this point the solution could either be:
-$$ G \dfrac{m_d}{r_d^2} 
-\sqrt{ \left( 1 - \left[ \dfrac{1}{(1-\gamma)^2}\right]\right)^2} 
-\quad \text{or} \quad
-G \dfrac{m_d}{r_d^2} 
-\sqrt{ \left(\left[ \dfrac{1}{(1-\gamma)^2}\right]-1\right)^2} 
-\tag{r6}$$
-
-which is:
-
-$$ G \dfrac{m_d}{r_d^2} 
-\left( 1 - \dfrac{1}{(1-\gamma)^2} \right) 
-\quad \text{or} \quad
-G \dfrac{m_d}{r_d^2} 
-\left( \dfrac{1}{(1-\gamma)^2} -1 \right) 
-\tag{r7}$$
-
-[[Wakker]] resolves this by taking the absolute value of the bracketed term, forcing the outcome to be positive:
-
-$$ (a_d)_{max} = G \dfrac{m_d}{r_d^2} 
-\left| \dfrac{1}{(1-\gamma)^2} -1 \right| 
-\tag{w4.12}$$
-
-```
-
-
+> [!math]-
+> Substitute $\alpha = 0^\circ$ into $\text{w4.11}$:
+> $$a_d = G \dfrac{m_d}{r_d^2} 
+> \sqrt{
+> 1 +
+> \dfrac{1}{[1+\gamma^2 - 2 \gamma \cos(0^\circ)]^2} -
+> \dfrac{2(1-\gamma \cos(0^\circ))}{[1+\gamma^2 - 2 \gamma \cos(0^\circ)]^{3/2}}
+> } \tag{r1}$$
+> 
+> $$ = G \dfrac{m_d}{r_d^2} 
+> \sqrt{
+> 1 +
+> \dfrac{1}{[1+\gamma^2 - 2 \gamma]^2} -
+> \dfrac{2(1-\gamma )}{[1+\gamma^2 - 2 \gamma]^{3/2}}
+> }  
+> \tag{r2}$$
+> 
+> $$ = G \dfrac{m_d}{r_d^2} 
+> \sqrt{
+> 1 +
+> \dfrac{1}{[(1-\gamma)^2]^2} -
+> \dfrac{2(1-\gamma )}{[(1-\gamma)^2]^{3/2}}
+> }  
+> \tag{r3}$$
+> 
+> $$ = G \dfrac{m_d}{r_d^2} 
+> \sqrt{
+> 1 +
+> \dfrac{1}{[(1-\gamma)^2]^2} -
+> \dfrac{2(1-\gamma )}{(1-\gamma)^3}
+> }  
+> \tag{r3}$$
+> 
+> $$ = G \dfrac{m_d}{r_d^2} 
+> \sqrt{
+> 1^2 +
+> \left[ \dfrac{1}{(1-\gamma)^2}\right]^2 -
+> 2 \cdot \left [\dfrac{1}{(1-\gamma)^2} \right]
+> }  
+> \tag{r5}$$
+> 
+> 
+> At this point the solution could either be:
+> $$ G \dfrac{m_d}{r_d^2} 
+> \sqrt{ \left( 1 - \left[ \dfrac{1}{(1-\gamma)^2}\right]\right)^2} 
+> \quad \text{or} \quad
+> G \dfrac{m_d}{r_d^2} 
+> \sqrt{ \left(\left[ \dfrac{1}{(1-\gamma)^2}\right]-1\right)^2} 
+> \tag{r6}$$
+> 
+> which is:
+> 
+> $$ G \dfrac{m_d}{r_d^2} 
+> \left( 1 - \dfrac{1}{(1-\gamma)^2} \right) 
+> \quad \text{or} \quad
+> G \dfrac{m_d}{r_d^2} 
+> \left( \dfrac{1}{(1-\gamma)^2} -1 \right) 
+> \tag{r7}$$
+> 
+> [[Wakker]] resolves this by taking the absolute value of the bracketed term, forcing the outcome to be positive:
+> 
+> $$ (a_d)_{max} = G \dfrac{m_d}{r_d^2} 
+> \left| \dfrac{1}{(1-\gamma)^2} -1 \right| 
+> \tag{w4.12}$$
 
 Finally, we can compare the perturbing accelerations of a primary body $k$ and a perturbing body $d$ by calculating the **maximum relative perturbing acceleration**:
 
@@ -406,13 +369,10 @@ ___
 ## Sphere of influence
 <!-- [Wakker] section 4.3 -->
 
-```ad-note
-title: ## To do: Add derivation of the Sphere of Influence radius
-icon: hammer
-color: 240,200,25
-It may be possible to combine the overly convoluted derivation in [[Wakker]] and the [simpler derivation on Wikipedia](https://en.wikipedia.org/wiki/Sphere_of_influence_(astrodynamics)#Derivation) together to create a derivation that is comprehensive but comprehensible.
-```
-
+> [!wip] ## To do: Add derivation of the Sphere of Influence radius
+> It may be possible to combine the overly convoluted derivation in [[Wakker]] and the [simpler derivation on Wikipedia](https://en.wikipedia.org/wiki/Sphere_of_influence_(astrodynamics)#Derivation) together to create a derivation that is comprehensive but comprehensible.
+> 
+> Also [this guy](https://www.youtube.com/watch?v=r8UYm7Ts5OI) has a pretty easy-to-follow approach. This may be the way to go.
 
 
 What we have seen in the previous section is that if you have a spacecraft that is located somewhere in relation to two bodies, it will experience a gravitational acceleration from either body. The magnitude of this acceleration depends on where exactly the spacecraft is located with respect to the two bodies. The question is now: when is it appropriate to describe the spacecraft's position in terms of the first body, and when in terms of the second body? When do the graviational effects of the one body take precedent over the other?
@@ -430,13 +390,12 @@ The reason for this is that if you're between Earth and the sun, and you're movi
 $$\dfrac{(r_{SOI})_{min}}{(r_{SOI})_{max}} \approx \left(\dfrac{1+3 \cos^2 (0^\circ)}{1+3 \cos^2 (90^\circ)} \right)^{-1/10} \approx 0.87$$
 
 Here I have used equation $\text{w4.25}$. However, it turns out that we commonly neglect this oblateness and just assume that the SOI is a perfect sphere. So we will do the same for now.
-```ad-warning
-title: Assumption: The Sphere of Influence is a sphere!
-color: 200,80,225
-When discussing the Sphere of Influence (SOI), we assume that the SOI is a perfect sphere. As such, we ignore:
- - The effect of third bodies on the shape of the SOI.
- - The oblation of the SOI in the two-body case (no "egg of influence").
-```
+
+> [!assumption] Assumption: The Sphere of Influence is a sphere!
+> When discussing the Sphere of Influence (SOI), we assume that the SOI is a perfect sphere. As such, we ignore:
+>  - The effect of third bodies on the shape of the SOI.
+>  - The oblation of the SOI in the two-body case (no "egg of influence").
+
 In that case, we can calculate the radius of the SOI as follows:
 
 $$R_{SOI} = r_{13} \left( \dfrac{m_1}{m_3}\right)^{2/5}$$

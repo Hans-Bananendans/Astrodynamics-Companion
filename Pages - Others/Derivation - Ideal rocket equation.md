@@ -1,28 +1,23 @@
 # Derivation - Ideal rocket equation
-```ad-note
-title: Note: The lecturer has an awesome video guide for this derivation on Brightspace
-```
+
+> [!note] Note: The lecturer has an awesome video guide for this derivation on Brightspace
+
 
 In this derivation, we will derive the famous or [Tsiolkovsky rocket equation](https://en.wikipedia.org/wiki/Tsiolkovsky_rocket_equation). To start it, we start with a very simple model of a rocket that is throwing out propellant reactants at a significant speed, as depicted.
 ![[ideal_rocket_equation1.png]]
 
 We make a couple of assumptions first, to simplify our work.
-```ad-warning
-title: Assumption 1
-color: 200,80,225
 
-We assume that the depicted system is **closed** and **no external forces**, such as drag, gravity, etcetera are present. 
-```
+> [!assumption] Assumption 1
+> We assume that the depicted system is **closed** and **no external forces**, such as drag, gravity, etcetera are present. 
 
-```ad-warning
-title: Assumption 2
-color: 200,80,225
 
-We assume that the depicted situation happens over an infinitesimally small unit of time: $$\Delta t \rightarrow 0$$
+> [!assumption] Assumption 2
+> We assume that the depicted situation happens over an infinitesimally small unit of time: $$\Delta t \rightarrow 0$$
+>
+> This means that we can also assume the ejected propellant mass to be much smaller than the total rocket mass:
+> $$m_P << m_R$$
 
-This means that we can also assume the ejected propellant mass to be much smaller than the total rocket mass:
-$$m_P << m_R$$
-```
 
 ### Step 1 - Define the exhaust velocity
 With these assumptions under our belt, let's first get an expression for the exhaust velocity:
@@ -52,14 +47,12 @@ We do not have an expression yet for the time derivative of the momentum, so let
 $$\dot{p} = m_R \dot{V}_R + \dot{m}_R V_R - (m_P \dot{V}_P  + \dot{m}_P V_P) =0\tag{r9}$$
 
 ### Step 5 - Integrate
-```ad-warning
-title: Assumption 3
-color: 200,80,225
 
-Since the instantaneous propellant mass $\dot{m}_P$ is small and the acceleration of the propellant after exhaust $\dot{V}_P$ is small too, we assume that its product is negligible:
-$$\dot{m}_P \dot{V}_P \approx 0$$
+> [!assumption] Assumption 3
+> Since the instantaneous propellant mass $\dot{m}_P$ is small and the acceleration of the propellant after exhaust $\dot{V}_P$ is small too, we assume that its product is negligible:
+> $$\dot{m}_P \dot{V}_P \approx 0$$
 
-```
+
 This allows us to rewrite $\text{r9}$ as:
 $$ m_R \dot{V}_R + \dot{m}_R V_R - \dot{m}_P V_P = 0 \tag{r10}$$
 
@@ -77,14 +70,11 @@ Integrate:
 $$\int_{V_1}^{V_2}dV_R = -\int_{m_1}^{m_2} V_e \dfrac{dm_R}{m_R} \tag{r16}$$
 
 We now make another assumption which allows us to exclude $V_e$ from the integral:
-```ad-warning
-title: Assumption 4
-color: 200,80,225
 
-We assume that the exhaust velocity is constant, regardless of rocket mass:
-$$\dfrac{dV_e}{dm_R} = 0$$
+> [!assumption] Assumption 4
+> We assume that the exhaust velocity is constant, regardless of rocket mass:
+> $$\dfrac{dV_e}{dm_R} = 0$$
 
-```
 
 $$\int_{V_1}^{V_2}dV_R = -V_e \int_{m_1}^{m_2}  \dfrac{dm_R}{m_R} \tag{r17}$$
 

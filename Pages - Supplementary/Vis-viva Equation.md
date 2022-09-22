@@ -14,13 +14,9 @@ $$\dfrac{1}{2}V^2 - \dfrac{\mu}{r} = -\dfrac{\mu}{2a}$$
 
 ___
 
-```ad-note
-title: Note: When are you allowed to use the vis-viva equation?
-
-You are allowed to use the vis-viva equation:
- - So long as the system contains **two bodies**.
- - So long as the mass of one of the bodies is so small that it can be ignored (restricted two-body problem).
- - So long as the orbit is a **Kepler orbit**.
- - So long as the only sources of internal energy are **kinetic and potential energy** (i.e. only point masses, no relativistic effects, etc.)
-
-```
+> [!note] Note: When are you allowed to use the vis-viva equation?
+> You are allowed to use the vis-viva equation:
+>  - So long as the system contains **two bodies**.
+>  - So long as the mass of one of the bodies is so small that it can be ignored (restricted two-body problem).
+>  - So long as the orbit is a **Kepler orbit**.
+>  - So long as the only sources of internal energy are **kinetic and potential energy** (i.e. only point masses, no relativistic effects, etc.)

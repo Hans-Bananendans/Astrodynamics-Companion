@@ -1,11 +1,7 @@
 # Angular momentum in the two-body problem
 <!-- [Wakker] section 2.7 -->
 
-```ad-note
-title: ## ** !!! This section is still under construction !!! **
-icon: hammer
-color: 240,200,25
-```
+> [!wip] ## ** !!! This section is still under construction !!! **
 
 The two-body problem is interesting in part because it displays interesting symmetries. In this section, we look at the angular momentum of a two-body system.
 

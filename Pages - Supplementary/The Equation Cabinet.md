@@ -4,9 +4,9 @@ ___
 
 A medicine cabinet can be used in case of medical problems. Similarly, this page can be used in case of mathematical problems. Though useful, both should come with a warning about correct usage, so the user does not develop a substance dependence. As such, let me give you a warning:
 
-```ad-warning
-title: Warning: Do not become dependent on this list when studying for your exam!
-```
+
+> [!warning] Warning: Do not become dependent on this list when studying for your exam!
+
 
 Instead, I suggest depending on derivations, graphical representations, and most of all, your own understanding of the theory. Try learning a minimum number of foundational equations by heart (such as [[Vis-viva Equation|vis-viva]], [[Kepler's Laws|Kepler's laws]], trajectory equation, N-body equations of motion) and learn how to derive the rest from those. Equations that have hellish derivations will not be asked on the exam; if you need them, they will probably be given. After all, the point of the exam is to test your knowledge about astrodynamics, not to do a bunch of flashy but pointless math for three hours. Moreover, you'll need to be able to recognise when you are and when you are not allowed to apply an equation, and you'll likely want to know what the underlying assumptions are. You won't do either by pulling a bunch of equations out of a hat.
 

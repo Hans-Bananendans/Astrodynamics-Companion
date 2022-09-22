@@ -7,12 +7,12 @@ We have established that for any N-body system, we **generally** cannot describe
 
 You will not have to take this on faith: we will derive them in a moment. You will have to know these derivations for the exam anyway.
 
-```ad-warning
-Why are they called the **integrals** of motion? Great question, because the term doesn't actually refer to [Riemannian integrals](https://en.wikipedia.org/wiki/Riemann_integral). Instead, it refers to a bunch of constants; six of which determine where the barycentre of the system is, and in which direction it moves. Three others refer to the angular momentum of the whole system, and then the last one of them is just an expression for the sum of potential and kinetic energy.
+> [!warning]
+> Why are they called the **integrals** of motion? Great question, because the term doesn't actually refer to [Riemannian integrals](https://en.wikipedia.org/wiki/Riemann_integral). Instead, it refers to a bunch of constants; six of which determine where the barycentre of the system is, and in which direction it moves. Three others refer to the angular momentum of the whole system, and then the last one of them is just an expression for the sum of potential and kinetic energy.
+>
+> In short, beware! The **integrals** of motion are actually **constants** of motion.
 
-In short, beware! The **integrals** of motion are actually **constants** of motion.
 
-```
 ___
 ## Derivation recipe
 Now will follow a recipe for the derivations of the integrals of motion:
@@ -109,49 +109,46 @@ $$\mathcal{E}_{kin} + \mathcal{E}_{pot} = C$$
 ___
 
 ## Summary - integrals of motion
-```ad-summary
-title: Recipe for the derivations of the integrals of motion
 
-First, remember this general equation of motion (2.3 from [[Wakker]]):
-$$m_i \dfrac{d^2 \bar{r}_i}{dt^2} = \sum_{j \neq i} G \dfrac{m_i m_j}{r^3_{ij}} \bar{r}_{ij} \tag{w2.3}$$
-
-- Deriving **constant linear momentum**:
--> Sum equation $\text{w2.3}$ over all bodies $i$ in the system.
-
-- Deriving **constant angular momentum**:
--> Calculate $\bar{r}_i \times \text{w2.3}$ and them sum over all bodies $i$.
-
-- Deriving **constant total mechanical energy**:
--> Calculate $\dfrac{d\bar{r}_i}{dt} \cdot \text{w2.3}$ and them sum over all bodies $i$.
-```
-
-```ad-summary
-title: The ten integrals of motion
-
-From constant linear momentum:
-$$
-\dfrac{dx_{cm}}{dt} = a_1 \hspace{3em}
-\dfrac{dy_{cm}}{dt} = a_2 \hspace{3em}
-\dfrac{dz_{cm}}{dt} = a_3 \tag{w2.6}
-$$
+> [!summary] Recipe for the derivations of the integrals of motion
+> First, remember this general equation of motion (2.3 from [[Wakker]]):
+>   $$m_i \dfrac{d^2 \bar{r}_i}{dt^2} = \sum_{j \neq i} G \dfrac{m_i m_j}{r^3_{ij}} \bar{r}_{ij} \tag{w2.3}$$
+>   
+>   - Deriving **constant linear momentum**:
+>   -> Sum equation $\text{w2.3}$ over all bodies $i$ in the system.
+>   
+>   - Deriving **constant angular momentum**:
+>   -> Calculate $\bar{r}_i \times \text{w2.3}$ and them sum over all bodies $i$.
+>   
+>   - Deriving **constant total mechanical energy**:
+>   -> Calculate $\dfrac{d\bar{r}_i}{dt} \cdot \text{w2.3}$ and them sum over all bodies $i$.****
 
 
-$$
-x_{cm} = a_1 t + b_1 \hspace{3em}
-y_{cm} = a_2 t + b_2 \hspace{3em}
-z_{cm} = a_3 t + b_3 \tag{w2.8}
-$$
+> [!summary] The ten integrals of motion
+> From constant linear momentum:
+>   $$
+>   \dfrac{dx_{cm}}{dt} = a_1 \hspace{3em}
+>   \dfrac{dy_{cm}}{dt} = a_2 \hspace{3em}
+>   \dfrac{dz_{cm}}{dt} = a_3 \tag{w2.6}
+>   $$
+>   
+>   
+>   $$
+>   x_{cm} = a_1 t + b_1 \hspace{3em}
+>   y_{cm} = a_2 t + b_2 \hspace{3em}
+>   z_{cm} = a_3 t + b_3 \tag{w2.8}
+>   $$
+>   
+>   From constant angular momentum:
+>   $$
+>   \begin{align}
+>   H_x = \sum_i m_i (y_i\dot{z}_i-z_i \dot{y_i}) = c_1 \\
+>   H_y = \sum_i m_i (z_i\dot{x}_i-x_i \dot{z_i}) = c_2 \tag{w2.11} \\
+>   H_z = \sum_i m_i (x_i\dot{y}_i-y_i \dot{x_i}) = c_3
+>   \end{align}
+>   $$
+>   
+>   From constant mechanical energy:
+>   $$\mathcal{E}_{kin} + \mathcal{E}_{pot} = C$$
 
-From constant angular momentum:
-$$
-\begin{align}
-H_x = \sum_i m_i (y_i\dot{z}_i-z_i \dot{y_i}) = c_1 \\
-H_y = \sum_i m_i (z_i\dot{x}_i-x_i \dot{z_i}) = c_2 \tag{w2.11} \\
-H_z = \sum_i m_i (x_i\dot{y}_i-y_i \dot{x_i}) = c_3
-\end{align}
-$$
-
-From constant mechanical energy:
-$$\mathcal{E}_{kin} + \mathcal{E}_{pot} = C$$
-```
 ___
