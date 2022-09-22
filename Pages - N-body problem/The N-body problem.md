@@ -26,10 +26,9 @@ To give us somewhere to start from mathematically, let's consider the cloud of $
 
 In this diagram, we have an inertial reference frame XYZ, relative to which each point's position can be described with a vector $\bar{r}$. We now consider a body $i$ and a body $j$; two arbitrary bodies in this cloud of point masses. As before, we can describe the position of such a point with a vector from the origin to the point: here we have $\bar{r}_i$ and $\bar{r}_j$. The relative distance between them we will describe with a vector $\bar{r}_{ij}$, which is the vector pointing **from** $i$ **to** $j$.
 
-```ad-warning
-title: Assumption: All masses are point masses
-color: 200,80,225
-```
+
+> [!assumption] Assumption: All masses are point masses
+
 
 With this in mind, we consider point $i$ and start to apply [[Newtonian Mechanics#Newton's second law|Newton's second law]]:
 $$m_i \bar{a}_i = \bar{F}$$
@@ -44,14 +43,10 @@ Note that under the summation, we write $j \neq i$ because the force on $i$ beca
 
 So if we consider the points to be 3D space, each vector $\bar{r}$ is of length $3$. So this is three second-order differential equations packed in one expression, and that is just to describe the particle $i$. Therefore for a system of $n$ bodies, we have to solve $3n$ second-order differential equations! 
 
-```ad-tip
-title: Tip: Programming N-body solvers
-icon: lightbulb
 
-Rather than solving these differential equations this by hand, you will of course want to write some software that will do it for you. It is fairly straightforward to do so with many different programming languages. 
-
-I personally recommend that for your own understanding of the material, you take aside a few hours and try to do this for yourself. You will come out of it with a much better understanding of the theory, and if you're going to do anything semi-serious work related to Astrodynamics, you need to know that anyway. If you get stuck, you can refer to my [[Programming a simple 3-body problem solver|tutorial on this topic]].
-
-```
+> [!tip] Tip: Programming N-body solvers
+> Rather than solving these differential equations this by hand, you will of course want to write some software that will do it for you. It is fairly straightforward to do so with many different programming languages. 
+>   
+>   I personally recommend that for your own understanding of the material, you take aside a few hours and try to do this for yourself. You will come out of it with a much better understanding of the theory, and if you're going to do anything semi-serious work related to Astrodynamics, you need to know that anyway. If you get stuck, you can refer to my [[Programming a simple 3-body problem solver|tutorial on this topic]].
 
 ___

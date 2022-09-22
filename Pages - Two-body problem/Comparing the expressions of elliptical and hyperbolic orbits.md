@@ -1,11 +1,7 @@
 # Comparing the expressions of elliptical and hyperbolic orbits
 
-```ad-note
-title: ## ** !!! This section is still under construction !!! **
-icon: hammer
-color: 240,200,25
 
-Low priority section, as you can just read the section in [[Wakker]], and doesn't really need.
-```
+> [!wip] ## ** !!! This section is still under construction !!! **
+> Low priority section. It's useful for further insight, but as you can just read the section in [[Wakker]] it doesn't really need its own summary here.
 
 <!-- Wakker section 8.5 -->

@@ -1,10 +1,6 @@
 # Newtonian Mechanics
 <!-- This covers sections 1.1-1.8 from [[Wakker]] #chapter1 -->
-```ad-note
-title: ## ** !!! This section is still under construction !!! **
-icon: hammer
-color: 240,200,25
-```
+> [!wip] ## ** !!! This section is still under construction !!! **
 ___
 ## Newton's laws of motion
 <!-- [[Wakker]] section 1.1-->
@@ -52,13 +48,12 @@ $$
 $$
 Note that for simplicity it is assumed here that the origins of the two reference frames coincide with each other at time $t_0$.
 
-```ad-note
-title: Note
-
-The Newtonian principles discussed here use a notion that time is absolute; that there is some constant march of time that identical everywhere in the universe. However, because of Einstein we know that this is not true. The concepts of both general relativity and special relativity both presume that space and time do vary together, and that time can flow at different rates depending on your reference frame. And real-world measurements confirm that indeed it does.
-
-In this whole summary on Astrodynamics, we ignore these effects, as their contribution is usually very small at small relative speeds. Instead, we presume that time flows equally everywhere, so that we do not have to correct our Newtonian framework for these relativistic effects.
-```
+> [!note]
+> The Newtonian principles discussed here use a notion that time is absolute; that there is some constant march of time that identical everywhere in the universe. However, because of Einstein we know that this is not true. The concepts of both general relativity and special relativity both presume that space and time do vary together, and that time can flow at different rates depending on your reference frame. And real-world measurements confirm that indeed it does.
+> 
+> In this whole summary on Astrodynamics, we ignore these effects, as their contribution is usually very small at small relative speeds. Instead, we presume that time flows equally everywhere, so that we do not have to correct our Newtonian framework for these relativistic effects. 
+> 
+> In real-world space applications where the details matter, relativity can **absolutely not be ignored**. For example, GPS could not work without correction for general relativity.
 ___
 
 ### Apparent forces
@@ -111,13 +106,10 @@ If the masses of these bodies are $m_1$ and $m_2$ and the distance between them 
 $$F = G\dfrac{m_1 m_2}{r^2} \tag{w1.11}$$
 Note that this is a scalar equation, that can only give you the magnitude of the forces involved. In practice, there is often a large difference between the masses. If this difference is large enough, for example in case of a satellite orbiting a planet, the smaller mass can be safely ignored. In terms of accelerations, the gravitational acceleration of a satellite on a planet is usually of $O(-20) \; m/s^2$, and the gravitational acceleration of two large spacecraft is in the ballpark of $O(-13) \; m/s^2$.
 
-```ad-warning
-title: Assumption
-color: 200,80,225
 
-When working with this equation, we assume that the masses involved are either **point masses** (their radius is zero) or that they behave like point masses (their shapes and mass distributions are uniform, so that their centroid and their center of gravity align).
+> [!assumption]
+> When working with this equation, we assume that the masses involved are either **point masses** (their radius is zero) or that they behave like point masses (their shapes and mass distributions are uniform, so that their centroid and their center of gravity align).
 
-```
 
 The parameter $G$ in equation $\text{w1.11}$ is the **universal gravitational constant**, with a currently established value of $G= 6.67428\cdot10^{-11} \; m^3/kg \; s^2$. In practice, this parameter is extremely difficult to measure accurately. However, the product of $G$ and the mass of a large body is generally much easier to measure. Therefore we usually work with $\mu$, the body-specific gravitational parameter:
 $$\mu_{body} = G \cdot M_{body}$$
@@ -131,12 +123,11 @@ You may also notice that there is another vector pointing towards $m_2$, namely 
 $$\bar{F} = -G\dfrac{m_1 m_2}{r^2}\hat{r}_{12}$$
 
 
-```ad-warning
+> [!warning] 
+> [[Wakker|The Wakker book]] is not always very clear about the distinction between using the univector $\hat{r}$ and the relative position vector $\bar{r}$. However, you should note carefully when which form is being used, because otherwise your answer could be off by a factor of $r$.
+> 
+> In addition, _K.F. Wakker_ prefers to simplify the notation of subscripts frequently, but usually only draws attention to this once, and then moves on. Note that up to here, we have used double subscripts; Vector $\bar{r}_{12}$ points **from** position 1 **to** position 2. However, in [[Wakker|the Wakker book]] you will find that at this point, the first subscript has already been omitted, and the vector is denoted by $\bar{r}_{2}$ instead. Take careful notice that you still understand where the vectors are pointing, because otherwise one could easily overlook the minus sign if the vectors point in opposing directions!
 
-[[Wakker|The Wakker book]] is not always very clear about the distinction between using the univector $\hat{r}$ and the relative position vector $\bar{r}$. However, you should note carefully when which form is being used, because otherwise your answer could be off by a factor of $r$.
-
-In addition, _K.F. Wakker_ prefers to simplify the notation of subscripts frequently, but usually only draws attention to this once, and then moves on. Note that up to here, we have used double subscripts; Vector $\bar{r}_{12}$ points **from** position 1 **to** position 2. However, in [[Wakker|the Wakker book]] you will find that at this point, the first subscript has already been omitted, and the vector is denoted by $\bar{r}_{2}$ instead. Take careful notice that you still understand where the vectors are pointing, because otherwise one could easily overlook the minus sign if the vectors point in opposing directions!
-```
 
 In many cases it is more useful to write this equation not in terms of the univector $\hat{r}_{12}$, but instead in terms of the relative position vector $\bar{r}_{12}$. Since we know that $\hat{r}_{12}$ has length 1 (as it is a univector), and that $\bar{r}_{12}$ has length $r$ (as it is the distance between the two masses), we can simply say that $\bar{r}_{12}$ is $r$ times as long as $\hat{r}_{12}$, or:
 $$\bar{r}_{12} = r \hat{r}_{12}$$
@@ -150,27 +141,27 @@ $$\bar{F} = -G\dfrac{m_1 m_2}{r^2}\dfrac{\bar{r}_{12}}{r} = -G\dfrac{m_1 m_2}{r^
 This is also the form you will find in [[Wakker|the Wakker book]]:
 $$\bar{F} = -G\dfrac{m_1 m_2}{r^3}\bar{r} \tag{w1.12}$$
 
-```ad-note
-The main important take-away here is that for the equation of the gravity force between two bodies, there is a **scalar** form and a **vectorial** form. The scalar form has the force inversely proportional to $r^2$, whilst the vectorial form has the force inversely proportional to $r^3$. This is because we commonly choose to express the vectorial force in terms of the relative position vector $\bar{r}$, rather than the univector $\hat{r}$. The minus sign in the vectorial form stems from the fact that the vectors $\bar{r}$ and $\bar{F}$ point in opposite directions.
 
-$$
-\begin{align}
+> [!note]
+> The main important take-away here is that for the equation of the gravity force between two bodies, there is a **scalar** form and a **vectorial** form. The scalar form has the force inversely proportional to $r^2$, whilst the vectorial form has the force inversely proportional to $r^3$. This is because we commonly choose to express the vectorial force in terms of the relative position vector $\bar{r}$, rather than the univector $\hat{r}$. The minus sign in the vectorial form stems from the fact that the vectors $\bar{r}$ and $\bar{F}$ point in opposite directions.
+>   
+>   $$
+>   \begin{align}
+>   
+>   \text{Scalar form:}
+>   \hspace{11em}
+>   \text{Vectorial form:}
+>   
+>   \\
+>   \\
+>   
+>   F = G\dfrac{m_1 m_2}{r^2}
+>   \hspace{10em}
+>   \bar{F} = -G\dfrac{m_1 m_2}{r^3}\bar{r}
+>   
+>   \end{align}
+>   $$
 
-\text{Scalar form:}
-\hspace{11em}
-\text{Vectorial form:}
-
-\\
-\\
-
-F = G\dfrac{m_1 m_2}{r^2}
-\hspace{10em}
-\bar{F} = -G\dfrac{m_1 m_2}{r^3}\bar{r}
-
-\end{align}
-$$
-
-```
 ___
 ### Gravity fields and potentials
 Two more useful concepts that sometimes come up are the concepts of **gravity fields** and **gravity potentials**. As we have done previously, we often think of gravity's effect as a force, but we can also conceptualize it as a field. In the situation of two masses $m_1$ and $m_2$, we can say that $m_1$ is generating a gravity field, and $m_2$ is being affected by this field. Then we can pose that the local strength of this field at $m_2$ is the _gravity force per unit mass of $m_2$_. We will denote this with $\bar{g}_2$:
@@ -194,46 +185,32 @@ ___
 ## Gravity field of a thin spherical shell and a sphere
 <!-- [[Wakker]] section 1.5-->
 
-```ad-note
-title: ## ** !!! This section is still under construction !!! **
-icon: hammer
-color: 240,200,25
+> [!wip] ## ** !!! This section is still under construction !!! **
+> This is low-priority, given that this derivation does not return often on the exam
+> - [ ] Perform the derivation
+> - [ ] Add some better graphics
+> - [ ] Proofread
 
-- [ ] Perform the derivation
-- [ ] Add some better graphics
-- [ ] Proofread
-
-```
 
 ___
 ## External gravity field of a body with arbitrary mass distribution
 <!-- [[Wakker]] section 1.6-->
+> [!wip] ## ** !!! This section is still under construction !!! **
+> This is low-priority, given that this derivation does not return often on the exam
+> - [ ] Perform the derivation
+> - [ ] Add some better graphics
+> - [ ] Proofread
 
-```ad-note
-title: ## ** !!! This section is still under construction !!! **
-icon: hammer
-color: 240,200,25
-
-- [ ] Perform the derivation
-- [ ] Add some better graphics
-- [ ] Proofread
-
-```
 
 ___
 
 ## Maneuvers with rocket thrust
 <!-- [[Wakker]] section 1.7-->
 
-```ad-note
-title: ## ** !!! This section is still under construction !!! **
-icon: hammer
-color: 240,200,25
+> [!wip] ## ** !!! This section is still under construction !!! **
+> - [ ] Perform the derivation
+> - [ ] Refer to the [[Derivation - Ideal rocket equation]]
+> - [ ] Proofread
 
-- [ ] Perform the derivation
-- [ ] Refer to the [[Derivation - Ideal rocket equation]]
-- [ ] Proofread
-
-```
 
 ___

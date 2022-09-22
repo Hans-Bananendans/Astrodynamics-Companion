@@ -1,10 +1,6 @@
 # Three-body problem - Equations of Motion
 
-```ad-note
-title: ## ** !!! This section is still under construction !!! **
-icon: hammer
-color: 240,200,25
-```
+> [!wip] ## ** !!! This section is still under construction !!! **
 
 <!-- Wakker section 3.1 -->
 As mentioned [[The N-body problem|previously]], the three-body problem looks at how three masses behave under the influence of each other's gravity. Although such a system can be described deterministically, its behaviour is inherently chaotic; you can never describe the system's state at infinity without specifying some initial conditions with infinite precision. Small errors always become large errors.
@@ -14,15 +10,12 @@ Nonetheless, in this section we are going to lay out the equations of motion of 
  - The **Lagrange form**
  - The **Jacobi form**
 
-```ad-note
-title: Explain what the point of having different flavours is
-icon: hammer
-color: 240,200,25
-```
+> [!wip] Explain what the point of having different flavours is
 
-```ad-note
-The aformentioned forms all refer to mathematicians who struggled with the three-body problem during their lives. The moral of the story is that if you struggle with the three-body problem enough, you might also get your very own form of equations of motion named after you.
-```
+
+> [!note]
+> The aformentioned forms all refer to mathematicians who struggled with the three-body problem during their lives. The moral of the story is that if you struggle with the three-body problem enough, you might also get your very own form of equations of motion named after you.
+
 ___
 
 ## Equations of motion - Euler form
@@ -48,12 +41,9 @@ In the Euler from, we use a bunch of absolute position vectors (such as $\bar{r}
 
 ![[threebody_lagrange.png]]
 
-```ad-tip
-title: Tip: A matter of perspective
-icon: lightbulb
+> [!tip] Tip: A matter of perspective
+> You can think of the difference between the Euler form and the Lagrange form as follows: In the Euler form, you can stand at the origin of the inertial reference frame and before you you will see the three bodies move around each other. With the Lagrange form, you're going to sit on one of the masses and see how one of the other two masses moves around. But because the mass you're sitting on keeps moving around as well, your perspective will as a result constantly move.
 
-You can think of the difference between the Euler form and the Lagrange form as follows: In the Euler form, you can stand at the origin of the inertial reference frame and before you you will see the three bodies move around each other. With the Lagrange form, you're going to sit on one of the masses and see how one of the other two masses moves around. But because the mass you're sitting on keeps moving around as well, your perspective will as a result constantly move.
-```
 
 The way the relative position vectors are set up in the figure results in a compatibility equation:
 $$\bar{r}_{12} + \bar{r}_{23} + \bar{r}_{31} = 0$$
@@ -122,11 +112,7 @@ $$\alpha = \dfrac{m_1}{m_1+m_2} \tag{w3.6}$$
 and we use $M$ for the total system mass:
 $$M = m_1 + m_2 + m_3$$
 
-```ad-note
-title: Add the derivation of the Jacobi formulation (see Wakker p. 48)
-icon: hammer
-color: 240,200,25
-```
+> [!wip] Add the derivation of the Jacobi formulation (see Wakker p. 48)
 
 You can then write the equations of motion as:
 
@@ -163,11 +149,7 @@ $$\dfrac{d^2 \bar{R}}{dt^2} = -G(m_1+m_2) \dfrac{\bar{r}_{12}}{r^3_{12}} $$
 
 $$\dfrac{d^2 \bar{r}_{12}}{dt^2} = - G M \dfrac{\bar{R}}{R^3}$$
 
-```ad-note
-title: Add math block for this "collapse"
-icon: hammer
-color: 240,200,25
-```
+> [!wip] Add math block for this "collapse"
 
 ![[threebody_jacobi_lunar.png]]
 
@@ -192,60 +174,52 @@ $$\dfrac{m_3}{m_1+m_2} << 1$$
 This collapses system $\text{w3.9}$ into the same form as for the lunar case.
 
 
-```ad-note
-title: Add math block for this "collapse"
-icon: hammer
-color: 240,200,25
-```
+> [!wip] Add math block for this "collapse"
+
 ![[threebody_jacobi_planetary.png]]
 ___
 
 ## Summary - Three-body Equations of Motion
 
-```ad-summary
-title: Three forms of the three-body equations of motion
-
-**Euler form** (18th order system):
-
-$$\begin{cases}
-\dfrac{d^2 \bar{r}_1}{dt^2} = G \dfrac{m_2}{r^3_{12}} \bar{r}_{12} + G \dfrac{m_3}{r^3_{13}} \bar{r}_{13}\\
-\dfrac{d^2 \bar{r}_2}{dt^2} = G \dfrac{m_1}{r^3_{21}} \bar{r}_{21} + G \dfrac{m_3}{r^3_{23}} \bar{r}_{23}\\
-\dfrac{d^2 \bar{r}_3}{dt^2} = G \dfrac{m_1}{r^3_{31}} \bar{r}_{31} + G \dfrac{m_2}{r^3_{32}} \bar{r}_{32}\\
-\end{cases}$$
-
-
-**Lagrange form** (18th order system):
-$$\begin{cases}
-\dfrac{d^2 \bar{r}_{12}}{dt^2} = 
-G \left[
-m_3 \left( \dfrac{\bar{r}_{23}}{r^3_{23}} + \dfrac{\bar{r}_{13}}{r^3_{13}} \right) 
-- (m_1+m_2) \dfrac{\bar{r}_{12}  }{r^3_{12}} 
-\right] \\
-\dfrac{d^2 \bar{r}_{23}}{dt^2} = 
-G \left[
-m_1 \left( \dfrac{\bar{r}_{31}}{r^3_{31}} + \dfrac{\bar{r}_{12}}{r^3_{12}} \right) 
-- (m_2+m_3) \dfrac{\bar{r}_{23}  }{r^3_{23}} 
-\right] \\
-\dfrac{d^2 \bar{r}_{31}}{dt^2} = 
-G \left[
-m_2 \left( \dfrac{\bar{r}_{12}}{r^3_{12}} + \dfrac{\bar{r}_{23}}{r^3_{23}} \right) 
-- (m_3+m_1) \dfrac{\bar{r}_{31}  }{r^3_{31}} 
-\right] \\
-\end{cases}$$
-
-**Jacobi form** (12th order system):
-$$\begin{cases}
-\dfrac{d^2 \bar{R}}{dt^2} = 
-- G \left[
-(m_1+m_2) \dfrac{\bar{r}_{12}  }{r^3_{12}}+m_3 \left( \dfrac{\bar{r}_{13}}{r^3_{13}} - \dfrac{\bar{r}_{23}}{r^3_{23}} \right) 
-\right] \\
-\dfrac{d^2 \bar{r}_{12}}{dt^2} = 
-- G M \left[ \alpha \dfrac{\bar{r}_{13}}{r^3_{13}} +
-(1-\alpha)\dfrac{\bar{r}_{23}}{r^3_{23}}
-\right]
-\end{cases}$$
-with
-$$\alpha = \dfrac{m_1}{m_1+m_2} \hspace{2em} , \hspace{2em} M = m_1 + m_2 + m_3$$
-
-
-```
+> [!summary] Three forms of the three-body equations of motion
+> **Euler form** (18th order system):
+> 
+> $$\begin{cases}
+> \dfrac{d^2 \bar{r}_1}{dt^2} = G \dfrac{m_2}{r^3_{12}} \bar{r}_{12} + G \dfrac{m_3}{r^3_{13}} \bar{r}_{13}\\
+> \dfrac{d^2 \bar{r}_2}{dt^2} = G \dfrac{m_1}{r^3_{21}} \bar{r}_{21} + G \dfrac{m_3}{r^3_{23}} \bar{r}_{23}\\
+> \dfrac{d^2 \bar{r}_3}{dt^2} = G \dfrac{m_1}{r^3_{31}} \bar{r}_{31} + G \dfrac{m_2}{r^3_{32}} \bar{r}_{32}\\
+> \end{cases}$$
+> 
+> 
+> **Lagrange form** (18th order system):
+> $$\begin{cases}
+> \dfrac{d^2 \bar{r}_{12}}{dt^2} = 
+> G \left[
+> m_3 \left( \dfrac{\bar{r}_{23}}{r^3_{23}} + \dfrac{\bar{r}_{13}}{r^3_{13}} \right) 
+> - (m_1+m_2) \dfrac{\bar{r}_{12}  }{r^3_{12}} 
+> \right] \\
+> \dfrac{d^2 \bar{r}_{23}}{dt^2} = 
+> G \left[
+> m_1 \left( \dfrac{\bar{r}_{31}}{r^3_{31}} + \dfrac{\bar{r}_{12}}{r^3_{12}} \right) 
+> - (m_2+m_3) \dfrac{\bar{r}_{23}  }{r^3_{23}} 
+> \right] \\
+> \dfrac{d^2 \bar{r}_{31}}{dt^2} = 
+> G \left[
+> m_2 \left( \dfrac{\bar{r}_{12}}{r^3_{12}} + \dfrac{\bar{r}_{23}}{r^3_{23}} \right) 
+> - (m_3+m_1) \dfrac{\bar{r}_{31}  }{r^3_{31}} 
+> \right] \\
+> \end{cases}$$
+> 
+> **Jacobi form** (12th order system):
+> $$\begin{cases}
+> \dfrac{d^2 \bar{R}}{dt^2} = 
+> - G \left[
+> (m_1+m_2) \dfrac{\bar{r}_{12}  }{r^3_{12}}+m_3 \left( \dfrac{\bar{r}_{13}}{r^3_{13}} - \dfrac{\bar{r}_{23}}{r^3_{23}} \right) 
+> \right] \\
+> \dfrac{d^2 \bar{r}_{12}}{dt^2} = 
+> - G M \left[ \alpha \dfrac{\bar{r}_{13}}{r^3_{13}} +
+> (1-\alpha)\dfrac{\bar{r}_{23}}{r^3_{23}}
+> \right]
+> \end{cases}$$
+> with
+> $$\alpha = \dfrac{m_1}{m_1+m_2} \hspace{2em} , \hspace{2em} M = m_1 + m_2 + m_3$$

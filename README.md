@@ -37,12 +37,16 @@ gh repo clone Hans-Bananendans/Astrodynamics-Companion
 3. Open Obsidian Md, open a vault and select the option *Open folder as vault*. Select the folder in which you cloned this repository as the vault location. If successful, you will see a list of the files in this repository appear in a column on the left-hand side.
 ![installation2.png](./media/installation2.png)
 
-4. (OPTIONAL) In Obsidian Md, go to **Options** -> **Community plugins** and turn Safe mode OFF. Obsidian Md can be expanded using an increasingly large pool of community-made plugins. These plugins cannot be validated by the Obsidian Md developers, and so they disable the use of these plugins by default. Don't worry, this repository only uses two plugins, both of which are open-source and safe for use.
-5. (OPTIONAL) Install the [Admonition](https://github.com/valentine195/obsidian-admonition) plugin. Click **Options** -> **Community plugins** -> **Browse community plugins** and search for "Admonition". After it has installed the plugin, enable it by ticking the box.
-    **This plugin is optional, but highly recommended, as this companion uses the Admonition boxes a lot to add emphasis and hide large mathematical derivations.**
-6. (OPTIONAL) Also install the [Editor Syntax Highlight](https://github.com/deathau/cm-editor-syntax-highlight-obsidian) plugin. This will make it easier to read the code snippets contained in the companion.
-If you went through the optional steps, the Community Plugin tab in the Option panel should look like this:
-![installation1.png](./media/installation1.png)
+4. This companion uses numerous custom information boxes, attached as a CSS snippet. It is recommended you enable these, at it makes the document **much** more readable.
+	1. Go to **Options** -> **Appearance** -> **CSS Snippets**
+	2. Enable the checkbox on *custom_callouts*
+5. (OPTIONAL) Obsidian Md can be expanded using an increasingly large pool of community-made plugins. These plugins cannot be validated by the Obsidian Md developers, and so they disable the use of these plugins by default. Don't worry, this repository only uses two plugins, both of which are open-source and safe for use.
+	1. Go to **Options** -> **Community plugins** and turn Safe mode OFF.
+	2. If you plan on going through some of the code examples, it is recommended to install the [Editor Syntax Highlight](https://github.com/deathau/cm-editor-syntax-highlight-obsidian) plugin. This will make it easier to read the code snippets contained in the companion.
+	3. If you also plan to help expand this companion, I recommend you also install [Paste to Current Indentation](https://github.com/jglev/obsidian-paste-to-current-indentation) because this makes pasting text and code into callout boxes much less painful.
+<!-- If you went through the optional steps, the Community Plugin tab in the Option panel should look like this:
+ ![installation1.png](./media/installation1.png) -->
+
 And that's it, you should now be good to go
 ___
 
@@ -59,10 +63,9 @@ In addition, you can use the index or Obsidian's search function to search the w
 
 ___
 ## Contribution
-If you are a fellow student and would like to contribute to this guide, feel free to contact me!
+If you are a fellow student and would like to contribute to this guide, feel free to contact me. Alternatively, you can clone the `development` branch and submit a pull request. Much appreciated! :heart:
 
 ___
 ## Dependencies
 This Obsidian vault uses the following community plugins:
- - [Admonition](https://github.com/valentine195/obsidian-admonition)
  - [Editor Syntax Highlight](https://github.com/deathau/cm-editor-syntax-highlight-obsidian)

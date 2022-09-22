@@ -4,16 +4,15 @@ The gradient is a differential operator that when applied to a quantity, it find
 
 The gradient operator is also referred to as the nabla operator, and is denoted by $\bar{\nabla}$.
 
-```ad-example
+> [!example]
+> For a quantity $f$ operating in 3D space, the gradient is:
+> 
+> $$\text{grad} f = \bar{\nabla} f = \dfrac{\partial f}{\partial x} \hat{i} + \dfrac{\partial f}{\partial y} \hat{j} + \dfrac{\partial f}{\partial z} \hat{k} =
+> \begin{bmatrix}
+> \dfrac{\partial f}{\partial x} \\
+> \dfrac{\partial f}{\partial y} \\
+> \dfrac{\partial f}{\partial z}
+> \end{bmatrix}
+> $$
 
-For a quantity $f$ operating in 3D space, the gradient is:
-
-$$\text{grad} f = \bar{\nabla} f = \dfrac{\partial f}{\partial x} \hat{i} + \dfrac{\partial f}{\partial y} \hat{j} + \dfrac{\partial f}{\partial z} \hat{k} =
-\begin{bmatrix}
-\dfrac{\partial f}{\partial x} \\
-\dfrac{\partial f}{\partial y} \\
-\dfrac{\partial f}{\partial z}
-\end{bmatrix}
-$$
-```
 ___

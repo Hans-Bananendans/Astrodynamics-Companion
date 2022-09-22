@@ -1,10 +1,6 @@
 # N-body problem - Barycentric relative motion
 
-```ad-note
-title: ## ** !!! This section is still under construction !!! **
-icon: hammer
-color: 240,200,25
-```
+> [!wip] ## ** !!! This section is still under construction !!! **
 
 After diving in to the integrals of motion, we discovered some important things. However, one of these things has gone as of yet unmentioned. Previously we described the system in terms of some fixed [[Newtonian Mechanics#Inertial reference frames|inertial reference frame]] somewhere near the N-body system. We now know that because any N-body system has constant linear momentum, the barycentre of the N-body system moves along a straight line with a constant velocity. 
 
@@ -12,9 +8,9 @@ After diving in to the integrals of motion, we discovered some important things.
 
 But what this means that if we were to attach a reference frame to the barycentre, it would actually form an inertial reference frame with respect to the original inertial reference frame! This means that we could also describe the system in terms of an inertial reference frame stuck to the system barycentre, without having to introduce those pesky [[Newtonian Mechanics#Apparent forces|apparent forces]]. We refer to this as **motion relative to the barycentre**, and it will be the main topic of this section.
 
-```ad-warning
-The [[Wakker|Wakker book]] introduces a notation change at this point. We will use it here too, so you should be aware of it. Henceforth in this section, $\bar{r}_i$ will now refer to the position vector of mass $i$ **with respect to the barycentre**.
-```
+> [!warning] 
+> The [[Wakker|Wakker book]] introduces a notation change at this point. We will use it here too, so you should be aware of it. Henceforth in this section, $\bar{r}_i$ will now refer to the position vector of mass $i$ **with respect to the barycentre**.
+
 ___
 # Deriving the barycentric relative equation of motion
 
@@ -52,11 +48,8 @@ And then **A MIRACLE HAPPENS**, and we can write this as:
 
 $$G\sum_{\substack{j=1 \\ j\neq i}}^n \dfrac{m_j}{r_i^3}\bar{r}_{ij} + G\sum_{j}^n \dfrac{m_j}{r_i^3}\bar{r}_{i} = 0 \tag{w2.20}$$
 
-```ad-note
-title: ## To do: Explain the miracle
-icon: hammer
-color: 240,200,25
-```
+> [!wip] ### To do: Explain the miracle
+
 
 Since these two terms together are zero, we can just add or subtract $\text{w2.20}$ from anything right? Well that's exactly what we are going to do. We subtract equation $\text{w2.20}$ from the right-hand side of equation $\text{2}$:
 

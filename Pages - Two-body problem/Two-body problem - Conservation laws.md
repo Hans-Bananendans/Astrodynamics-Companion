@@ -25,10 +25,8 @@ $$\mu = G m_k \left( 1 + \dfrac{m_i}{m_k}\right) \tag{w5.2-1}$$
 
 As mentioned before, we wish to focus on cases where one of the masses is much smaller than the other mass, i.e. $m_i << m_k$. This will help simplify the equations for many cases that are interesting to space engineering, namely the motion of a small vehicle with respect to a large planetary mass.
 
-```ad-warning
-title: Assumption: $m_i << m_k$
-color: 200,80,225
-```
+
+> [!assumption] Assumption: $m_i << m_k$
 
 This allows us to write the gravitational parameter as:
 $$\mu \approx G m_k \left( 1 + 0\right) = Gm_k\tag{w5.4}$$
@@ -78,15 +76,11 @@ This equation is known as the [[Vis-viva Equation|vis-viva equation]]. In essenc
 
 This equation will be very useful going forward. Its main strength lies in the fact that we can pretty much always apply it, no matter whether we are considering circular orbits, elliptical orbits, hyperbolic orbits, etc. 
 
-```ad-tip
-title: Tip
-icon: lightbulb
+> [!tip]
+> If you're going to learn one equation by heart for the exam, it should be this one. If you're stuck at a particular two-body related exam question, **always** check if you can apply the vis-viva equation to find one of the missing parameters. This will often be the case, so this is always worth doing. 
+> 
+> It can also be used to verify your answer, by checking whether the internal energy of the system has the correct sign for the orbit type. More on that later. The main point is that the vis-viva equation will [never let you down](https://www.youtube.com/watch?v=dQw4w9WgXcQ).
 
-If you're going to learn one equation by heart for the exam, it should be this one. If you're stuck at a particular two-body related exam question, **always** check if you can apply the vis-viva equation to find one of the missing parameters. This will often be the case, so this is always worth doing. 
-
-It can also be used to verify your answer, by checking whether the internal energy of the system has the correct sign for the orbit type. More on that later. The main point is that the vis-viva equation will [never let you down](https://www.youtube.com/watch?v=dQw4w9WgXcQ).
-
-```
 
 
 ### Deriving Kepler's Second Law
@@ -101,30 +95,23 @@ $$\bar{r} \times \dfrac{d^2\bar{r}}{dt^2} = 0$$
 It turns out we can also write this like so:
 $$\dfrac{d}{dt}\left( \bar{r} \times \dot{\bar{r}}\right) = 0$$
 
-```ad-note
-title: How is this possible?
-icon: paperclip
-collapse: closed
-color: 180,180,180
-
-Why are we allowed to write that
-$$\bar{r} \times \dfrac{d^2\bar{r}}{dt^2} \tag{r1}$$
-is equivalent to
-$$\dfrac{d}{dt}\left( \bar{r} \times \dot{\bar{r}}\right) \tag{r2}$$
-
-The answer is that we have actually applied the product rule but in reverse. Let's pretend we want to perform the derivation in $\text{r2}$. To do it, we would apply the product rule, right?
-
-$$\dfrac{d}{dt}\left( \bar{r} \times \dot{\bar{r}}\right) = \dot{\bar{r}} \times \dot{\bar{r}} + \bar{r} \times \ddot{\bar{r}} \tag{r3}$$
-
-By virtue of [[Vector Identities#Vector identity 4|vector identity 4]], the middle term equals zero:
-$$\dfrac{d}{dt}\left( \bar{r} \times \dot{\bar{r}}\right) = \cancel{\dot{\bar{r}} \times \dot{\bar{r}}}^{\;=\:0} + \bar{r} \times \ddot{\bar{r}} \tag{r4}$$
-$$\dfrac{d}{dt}\left( \bar{r} \times \dot{\bar{r}}\right) =  \bar{r} \times \ddot{\bar{r}} \tag{r5}$$
-or
-$$\dfrac{d}{dt}\left( \bar{r} \times \dot{\bar{r}}\right) = \bar{r} \times \dfrac{d^2\bar{r}}{dt^2} \tag{r6}$$
+> [!math]- How is this possible?
+> Why are we allowed to write that
+> $$\bar{r} \times \dfrac{d^2\bar{r}}{dt^2} \tag{r1}$$
+> is equivalent to
+> $$\dfrac{d}{dt}\left( \bar{r} \times \dot{\bar{r}}\right) \tag{r2}$$
+> 
+> The answer is that we have actually applied the product rule but in reverse. Let's pretend we want to perform the derivation in $\text{r2}$. To do it, we would apply the product rule, right?
+> 
+> $$\dfrac{d}{dt}\left( \bar{r} \times \dot{\bar{r}}\right) = \dot{\bar{r}} \times \dot{\bar{r}} + \bar{r} \times \ddot{\bar{r}} \tag{r3}$$
+> 
+> By virtue of [[Vector Identities#Vector identity 4|vector identity 4]], the middle term equals zero:
+> $$\dfrac{d}{dt}\left( \bar{r} \times \dot{\bar{r}}\right) = \cancel{\dot{\bar{r}} \times \dot{\bar{r}}}^{\;=\:0} + \bar{r} \times \ddot{\bar{r}} \tag{r4}$$
+> $$\dfrac{d}{dt}\left( \bar{r} \times \dot{\bar{r}}\right) =  \bar{r} \times \ddot{\bar{r}} \tag{r5}$$
+> or
+> $$\dfrac{d}{dt}\left( \bar{r} \times \dot{\bar{r}}\right) = \bar{r} \times \dfrac{d^2\bar{r}}{dt^2} \tag{r6}$$
 
 
-
-```
 
 The first time derivative of $\bar{r}$ is simply the velocity $\bar{V}$, which we can substitute instead:
 
@@ -134,17 +121,15 @@ If we were to integrate both sides, the zero on the right-hand side simply becom
 
 $$\bar{h} = \bar{r} \times \bar{V} \tag{w5.6}$$
 
-```ad-warning
-title: Angular momentum vs. specific angular momentum
+> [!warning] Angular momentum vs. specific angular momentum
+> There is a source of confusion here that should be cleared up. In the astrodynamics, there are generally two flavours of angular momentum:
+> 1. The (classic) angular momentum, which is defined as:
+> $$\bar{H} = \bar{r} \times m \bar{V}$$
+> 2. The **specific** angular momentum, which is the same as the classic angular momentum but **normalized for the mass**:
+> $$\bar{h} = \dfrac{\bar{H}}{m} = \bar{r} \times \bar{V}$$
+> 
+> We will frequently use the second definition, but the [[Wakker]] book uses $\bar{H}$ for **both types of momentum**, and just assumes that you can figure out yourself which one to use. I think this is needlessly confusing, and therefore throughout this whole companion, I will follow professor Cowan's convention, which uses the symbols as defined above; $\bar{H}$ denotes the (classic) angular momentum, whereas $\bar{h}$ denotes the **specific** angular momentum.
 
-There is a source of confusion here that should be cleared up. In the astrodynamics, there are generally two flavours of angular momentum:
-1. The (classic) angular momentum, which is defined as:
-$$\bar{H} = \bar{r} \times m \bar{V}$$
-2. The **specific** angular momentum, which is the same as the classic angular momentum but **normalized for the mass**:
-$$\bar{h} = \dfrac{\bar{H}}{m} = \bar{r} \times \bar{V}$$
-
-We will frequently use the second definition, but the [[Wakker]] book uses $\bar{H}$ for **both types of momentum**, and just assumes that you can figure out yourself which one to use. I think this is needlessly confusing, and therefore throughout this whole companion, I will follow professor Cowan's convention, which uses the symbols as defined above; $\bar{H}$ denotes the (classic) angular momentum, whereas $\bar{h}$ denotes the **specific** angular momentum.
-```
 
 We have now in essence proven that the specific angular momentum for a restricted two-body system is constant. Of course [[Derivation - N-body constant angular momentum|we already knew that]], given that this is so for any N-body system. 
 

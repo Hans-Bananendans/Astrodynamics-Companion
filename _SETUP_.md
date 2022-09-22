@@ -20,6 +20,8 @@ formula sheet
 
 ___
 
+> [!wip]  This section is due a clean-up
+
 ## Knowledge layout
 Chapter 1: 
 - [x] Chapter 1: [[Newtonian Mechanics]] (1.1-1.6, 1.8)

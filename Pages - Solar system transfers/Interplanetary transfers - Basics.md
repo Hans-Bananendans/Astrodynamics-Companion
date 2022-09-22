@@ -1,10 +1,6 @@
 # Interplanetary transfers - Basics
 
-```ad-note
-title: ## ** !!! This section is still under construction !!! **
-icon: hammer
-color: 240,200,25
-```
+> [!wip] ## ** !!! This section is still under construction !!! **
 
 <!-- Wakker section 18.1, 18.3 -->
 
@@ -24,15 +20,9 @@ Patched conics assumptions:
  - Assume planetary orbits are **circular** (Mercury ($e\approx0.2$) and Pluto ($e\approx0.25$) being outliers)
  - Assume planetary obits are **coplanar** (Mercury ($i\approx7^\circ$) and Pluto ($i\approx17^\circ$) being outliers)
 
-```ad-note
-title: Title
-icon: paperclip
-collapse: open
-color: 180,180,180
-$$\dfrac{1}{r_{Earth}} \cdot \dfrac{r_{Earth}+r_{Mars}}{r_{Earth}+r_{Mars}} - \dfrac{1}{r_{Earth}+r_{Mars}} \cdot \dfrac{r_{Earth}}{r_{Earth}}$$
-$$ = \dfrac{r_{Earth}+r_{Mars}}{r_{Earth}(r_{Earth}+r_{Mars})} - \dfrac{r_{Earth}}{r_{Earth}(r_{Earth}+r_{Mars})} = \dfrac{r_{Mars}}{r_{Earth}(r_{Earth}+r_{Mars})}$$
-
-```
+> [!math]
+> $$\dfrac{1}{r_{Earth}} \cdot \dfrac{r_{Earth}+r_{Mars}}{r_{Earth}+r_{Mars}} - \dfrac{1}{r_{Earth}+r_{Mars}} \cdot \dfrac{r_{Earth}}{r_{Earth}}$$
+>    $$ = \dfrac{r_{Earth}+r_{Mars}}{r_{Earth}(r_{Earth}+r_{Mars})} - \dfrac{r_{Earth}}{r_{Earth}(r_{Earth}+r_{Mars})} = \dfrac{r_{Mars}}{r_{Earth}(r_{Earth}+r_{Mars})}$$
 
 Baby's first interplanetary trajectory -> Hohmann transfer
 
